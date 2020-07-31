@@ -1,0 +1,272 @@
+====> com Prof. Gustavo Guanabara do Curso em vídeo <====
+
+
+*** NUNCA DIGA QUE VOCÊ É UM PROGRAMADOR EM HTML OU CSS. DIGA QUE VOCÊ USA ELES COMO FERRAMENTAS PARA CRIAR UM SITE, MAS NO CASO, VOCÊ PROGRAMA EM js. => desenvolve coisas em html e css.
+
+A COMUNIDADE NÃO ACEITA BEM QUEM DIZ QUE PROGRAMA EM HTML OU CSS, ENTÃO NÃO FALE ISSO POIS AS PESSOAS PODEM TE JULGAR MAL!!!!!! *****
+
+Sites/app que usam o JS:
+- Google
+- Youtube
+- Linkedin
+- Netflix
+- Facebook
+- Uber
+- Paypal
+
+Tecnologias:
+* Jquery
+* Angular
+* React
+* VueJS
+* Electron
+* Ionic
+* Cordova
+
+-------------------------
+ * Introdução ao Curso *
+-------------------------
+
+
+> 1 Aula
+	Introdução – JavaScript Moderno
+	
+	
+*********************************************	
+   => Módulo A: Conhecendo o JavaScript
+*********************************************
+
+	>> 4 Aulas <<
+		-----------------------------------------------
+		 Aula 1 – O que o JavaScript é capaz de fazer?
+		-----------------------------------------------
+		
+		${O QUE O JS FAZ?} = QUASE TUDO!!! é basicaente um client side!
+		
+		(Você sabe para que serve a linguagem JavaScript / ECMAScript? Sabe a diferença entre um cliente e um servidor para a Internet? Sabe para que servem as tecnologias HTML5, CSS3 e JavaScript? Consegue citar 4 sites que utilizam a linguagem JavaScript nos seus códigos?)
+		
+> COMO FUNCIONA:
+		
+		  cliente = usuário
+		 servidor = quem fornece os dados/arquivos
+		 
+		CLIENTE X SERVIDOR  
+		   |__________|
+		         |
+		      browser
+		        url      - vai p/ a infraestrutura da internet
+		         |
+		      servidor   - banco de arquivos
+		      
+		      
+	servidor = com sis op, fundamentalmente é como nossa máquina pessoal. 
+	
+		        
+		=> O CLIENTE PRECISA DE DADOS DE UM SERVIDOR.
+		=> qUANDO VOCÊ ACESSA O BROWSER E SOLICITA AO SERVIDOR UMA PÁGINA, VOCÊ ESTÁ PEDINDO DIRETORIOS, ARQUIVOS, ENFIM, (ESSES ARQUIVOS QUASE SEMPRE SÃO EM HTML) > o servidor te devolve a página solicitada como uma cópia (o servidor sabe através de diversos protocolos qual arquivo te enviar através do que você solicitou) > o seu browser recebe os arquivos do fornecedor e ele começa a montar a página pra você, fazer a interface dela. 
+	
+	
+	
+	> WEBSITE <
+	 	
+	 	ALÉM DOS SITES JÁ CITADOS ACIMA, QUE USAM O JS AINDA TEMOS MUITOS OUTROS, Amazon. com, IBM, sites do governo dos Estados Unidos, do governo do Brasil e etc. 
+	 	
+	 	
+		O JS FUNCIONA EM CONJ COM OUTRAS 2 TECNOLOGIAS: 
+		HTML + CSS (a partir da metafora da criação de um jornal: )
+		
+		- JORNALISTA = texto, conteúdo, imagens, midia, link = CONTEÚDO;
+		
+		- DESIGNER = pega tudo e deixa mais bonito, cores, fontes, deixa tudo mais atraente, afinal o conteúdo não se vende sozinho = DEIXAR ATRATIVO PARA A VENDA, INTERFACE;
+		
+		- PROGRAMADOR = CÉREBRO - vai cuidar da engenharia, onde entregar o jornal, verificar se entregou o jornal, segurança, etc. = ENGENHARIA DA PORRA TODA.
+		 
+		
+		 - HTML = <h1>, <p>, <imag/>
+		 - CSS = {border, background-color, margin}
+		 - JS = {"hover"}
+		 
+		 
+		 	--------------------
+		 	| - HTML = CONTEÚDO |
+		 	| - CSS = ESTILO    |
+		 	| - JS = INTERAÇÃO  |
+		        --------------------
+		
+---------------------------------------------------------------------		
+		
+		
+		----------------------------------
+		 Aula 2 – Como chegamos até aqui?
+		----------------------------------
+
+(Você sabe qual foi a empresa a criar o JavaScript? Sabe qual é a diferença entre as linguagens Java e JavaScript? Sabe qual é a relação que existe entre as linguagens JavaScript e ECMAScript? Sabia que, por exemplo, o programa usado para acessar WhatsApp no computador é feito em JavaScript?)
+
+(... Na aula passada => )
+1 - Diferença entre um cliente e um servidor da internet?
+2 - Para que serve HTML, CSS e JS?
+3 - 4 sites que fazer o uso do JS?
+
+${Evolução do JS}
+
+(GUERRA FRIA)
+ 1970 +-
+ 
+ - INTERNET
+ - EUA = DARPA
+  (ARPANET - Até chegar a "internet")
+  varias universidades = ex: MIT
+  
+ 1993 (TBL, no Cern)
+  - html
+  - tcp/ip
+  - www
+  
+  
+  > ncsa (mark endersen)
+  - MOSAIC = 1º navegador
+  
+  1994
+  - Jim clark + mark endersen = Netscape
+  
+  1995 (Brandon aik)
+  - MOca
+  
+  - ao mesmo tempo nascendo o JAVA
+  
+  e lançaram (a Netscape) o JAVAScript numa jogada de marketing.
+  
+  1997
+  Netscape padroniza a linguagem JS para não virar uma bagunça, pois no ano de 1995 a Microsoft (por ter olho grande e vendo o sucesso da coisa toda) cria o jScript.
+  
+  então a ECMA - europa (como a ISO nos EUA) é uma empresa de padronização cria o ECMAScript <= padronizando a linguagem.
+  
+  2002 - fim da treta entra Netscape e MIcrosoft
+  Netscape fale pois os computs da microsoft já vinham com navegador intalado, (o IE - internet explorer)
+  e assim os funcionários que eram da Netscape fundam o Mozilla
+  que é o Firefox
+  
+  2008
+  outra empresa vendo o sucesso e a evolução da internet
+  cria o google chrome
+  
+  2009
+  (com o chrome) surge o V8 - motor interno de JS muito podereso 
+  motor por debaixo do capô que roda JS
+   * Cada navegador te seu próprio motor:
+    Firefox = SpiderMonkei
+    Safari = nitro
+    Opera = karakan
+    Microsoft = Shacra
+    
+   o que torno o v8 muito importante é que ele gerava código git ou just-in-time = o que é muito importante*
+   além de o v8 ser em código aberto/livre
+ 
+ ENTÃO VAMOS LÁ: JÁ QUE O V8 É CÓDIGO ABERTO E SÓ RODA NO CHROME, EU POSSO PEGAR O CÓDIGO, ODIFICAR ELE PRA RODAR FORA DO CHROME: SERGE ENTÃO, EM 2010, O *** NodeJS ***
+ 
+ 2010
+ NodeJS - uma máquina que roda JS fora do navegador (assim posibilitoo o JS rodar no servidor também)
+ 
+ => ECMAScript - versão padronizada do JS
+ 	
+ 	1997 - versão 1.0 (JS 1.0 - padronizado pela ECMA)
+ 	
+ 	1998 - versão 2.0 (pequenas atualizações)
+ 	
+ 	1999 - versão 3.0 (compatibilidade com expressões regulares, bloco trycat para poder tratar erros que não existia nas versões anteriores - mas já existia nas liguagens C e JAVA)
+ 	
+ 	2009 - surge a verão 5 (pulando a 4 por causa da demora) que ficou conhecida por ES5 - essa versão mais popular de todas, compativel com quase todos os navegadores atuais (compativel com jason )e trouxe vários metodos para tratar a race
+ 	
+ 	2015 - ES6 (trouxe os declaradores let e const e também as strigs em templates - que vamos usar muito no curso)
+ 	
+ 	começa a sair um por ano e passa a se chamar pelo nome!
+ 	
+ 	2016 - ES 2016 - operador de exponensiação
+ 	
+ 	2017 - ES 2017 - compatibilidade com funções assincronas
+ 	
+ 	2018 - ES 2018 - novidades em expressões regulares (regrets) e possibilidades de promisses (promessas)
+ 	
+ 	
+==> com a evolução do JS surgem muitas tecnologias:
+
+(angular - google * react - facebook)
+
+(jQuery - conj de bibliotecas - criado pela galera do Mozilla que facilitava muito o uso de interatividades em JS - não é um framework)
+
+(angular - criado e mantido pelo google, facilita muito a craição de aplicações web - ling. enos imperativa. Mais declarativa - Mais sema=elhante ao sql para banco de dados)
+
+(react - facebook = mais ou menos as mesmas funcionalidades do Angular mas tem algumas flexibilidades maiores, por exeplo o react native para criação de aplicações em celular)
+
+(2014 - framework vue - ex-programador do googl
+e - ele estava cansado de usar o angular)
+
+(electron - mantido pelo github - especializado para a criação de interfaces gráficas)
+
+(vizual studiocode - microsoft - foi feito em electron, bem como o whatsapp desktop, discord, slack)
+
+(ionic - sdk pra poder criar aplicações para dispositivos móveis - ele usa o nodeJS para rodar o arquivo fora do navergador * vários acimausam o nodeJS também com a mesma finalidade * se baseava também numa versão antiga do JS chamada Phonegap que hoje é mantida pela APACHE. Ela evoluiu e se chama CORDOVA)
+
+várias bibliotecas, frameworks, sdks, etc para a criação de jogos
+ 	
+ 
+{class FazMerda(models.Model):
+    def Delete_Everything:
+        if js.txt is True:	
+            js.txt.delete()
+            
+        else:
+            pass} by Well
+
+		 
+	       ------------------------------------
+		Aula 3 – Dando os primeiros passos
+	       ------------------------------------
+	       
+(Quais são os melhores livros de JavaScript em Português? Onde ter acesso à documentação oficial do JavaScript em Português e Inglês? Quais são os requisitos de software para aprender a programar em JavaScript? Qual é o melhor editor para códigos JavaScript? Como instalar o Node.js no seu computador? Como configurar o Node.js? Para aprender JavaScript, é realmente necessário saber muito Inglês?Você está precisando de dicas para estudar e aprender de verdade?)	       
+	      
+1 - Que empresa criou o JavaScript?
+2 - JAVA e JavaSript tem alguma relação?
+3 - O que o ECMAScript tem a ver com o JavaScript?
+4 - Sabia que o programa Whatsapp desktop é criado em JavaScript?
+
+=> Como aprender?
+	
+	Ver vídeos
+	treinar o pc
+	ler
+	anotar coisas
+	interagir com outras pessoas
+	pensar em projetos pessoais
+	
+	Livros :
+	Guia definitivo de JS
+	JS guia do programador
+	guia mozilla ecma
+	ecma site
+	
+=> Instalação do Node.JS
+
+Preparando o ambiente de desenvolvimento, com:
+	Google CHROME
+	VS Code 
+	NodeJS
+	
+		
+		
+	   ----------------------------------------
+		Aula 4 – Criando o seu primeiro script
+	   ----------------------------------------
+	   
+		
+Módulo B: Comandos Básicos do JavaScript
+4 Aulas
+Módulo C: Entendendo o DOM
+2 Aulas
+Módulo D: Condições em JavaScript
+5 Aulas
+Módulo E: Repetições em JavaScript
+5 Aulas
+Módulo F: Avançando os estudos em JavaScript
+5 Aulas
+Teste JavaScript
