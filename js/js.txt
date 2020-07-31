@@ -103,9 +103,13 @@ Tecnologias:
 (Você sabe qual foi a empresa a criar o JavaScript? Sabe qual é a diferença entre as linguagens Java e JavaScript? Sabe qual é a relação que existe entre as linguagens JavaScript e ECMAScript? Sabia que, por exemplo, o programa usado para acessar WhatsApp no computador é feito em JavaScript?)
 
 (... Na aula passada => )
-1 - Diferença entre um cliente e um servidor da internet?
-2 - Para que serve HTML, CSS e JS?
-3 - 4 sites que fazer o uso do JS?
+
+> Guanabara ask...
+------------------
+
+	1 - Diferença entre um cliente e um servidor da internet?
+	2 - Para que serve HTML, CSS e JS?
+	3 - 4 sites que fazer o uso do JS?
 
 ${Evolução do JS}
 
@@ -224,20 +228,25 @@ várias bibliotecas, frameworks, sdks, etc para a criação de jogos
 	       ------------------------------------
 	       
 (Quais são os melhores livros de JavaScript em Português? Onde ter acesso à documentação oficial do JavaScript em Português e Inglês? Quais são os requisitos de software para aprender a programar em JavaScript? Qual é o melhor editor para códigos JavaScript? Como instalar o Node.js no seu computador? Como configurar o Node.js? Para aprender JavaScript, é realmente necessário saber muito Inglês?Você está precisando de dicas para estudar e aprender de verdade?)	       
+
+
+> Guanabara ask...
+------------------
+
 	      
-1 - Que empresa criou o JavaScript?
-2 - JAVA e JavaSript tem alguma relação?
-3 - O que o ECMAScript tem a ver com o JavaScript?
-4 - Sabia que o programa Whatsapp desktop é criado em JavaScript?
+	1 - Que empresa criou o JavaScript?
+	2 - JAVA e JavaSript tem alguma relação?
+	3 - O que o ECMAScript tem a ver com o JavaScript?
+	4 - Sabia que o programa Whatsapp desktop é criado em JavaScript?
 
 => Como aprender?
 	
-	Ver vídeos
-	treinar o pc
-	ler
-	anotar coisas
-	interagir com outras pessoas
-	pensar em projetos pessoais
+	*Ver vídeos
+	*treinar o pc
+	*ler
+	*anotar coisas
+	*interagir com outras pessoas
+	*pensar em projetos pessoais
 	
 	Livros :
 	Guia definitivo de JS
@@ -255,12 +264,72 @@ Preparando o ambiente de desenvolvimento, com:
 		
 		
 	   ----------------------------------------
-		Aula 4 – Criando o seu primeiro script
+	    Aula 4 – Criando o seu primeiro script
 	   ----------------------------------------
 	   
+(Você já sabe diferenciar dentro do seu código, os trechos em HTML5, em CSS3 e em JavaScript? Sabe organizar as pastas do seu projeto dentro do Visual Studio Code? Sabe como testar se o Node.js está devidamente instalado? Já sabe utilizar os comandos alert, confirm e prompt do JavaScript?)	
+
+> Guanabara ask...
+------------------
+
+	1 - Que livros/documentos foram recomendados na aula passada como bibliografia e base de leitura do curso?
+	2 - Para aprender JS, precisamos saber inglês?
+	3 - Que dicas foram dadas para quem quer estudar, metódos de estudo?
+	4 - Quais programas foram instalados para podemos fazer o curso com nosso ambiente de desenvolvimento de estudo montado?
+	
+
+		${Nossos primeiros Scripts}		
+	 
+	 ...MAndando bala no VS code (criando as pastas e arquivos)
+	 
+	 - comandos basicos da página html;
+	 - basico de css interno;
+	 - 3 comandos em js:
+	 	
+	 	window.alert,
+	 	window.confirm,
+	 	window.prompt.
+	 
+
+*************************************************		
+   => Módulo B: Comandos Básicos do JavaScript
+*************************************************
+
+       >> 4 Aulas <<
+       
+		- armazenar dados
+		- tratamentos de dados
+		- tipo primitivos
+		- operações com dados
 		
-Módulo B: Comandos Básicos do JavaScript
-4 Aulas
+		
+              ---------------------------------------
+		Aula 5 – Variáveis e Tipos Primitivos
+	      ---------------------------------------
+	      
+(Você sabe o que são variáveis? Sabe declarar variáveis em JavaScript? Sabe quais são os tipos primitivos do JavaScript? Consegue entender o que significa colocar um valor null dentro de uma variável em JavaScript?)
+
+> Guanabara ask...
+------------------
+
+
+	1 - Como gerenciar pastas no VS Code?
+	2 - NodeJS ta instalado no seu pc? Pra que serve o NodeJS?
+	3 - SAbe identificar/diferenciar o HTML5, CSS3 e JS de um cód?
+	4 - Já sabe disparar um alertas, confirmação e pergunta?
+	
+	
+	Guardar dados?
+	      
+	      
+	      
+	      
+	      
+		Aula 6 – Tratamento de dados
+		Aula 7 – Operadores (Parte1)
+		Aula 8 – Operadores (Parte 2)
+       
+       
 Módulo C: Entendendo o DOM
 2 Aulas
 Módulo D: Condições em JavaScript
