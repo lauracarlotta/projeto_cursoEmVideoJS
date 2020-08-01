@@ -289,6 +289,44 @@ Preparando o ambiente de desenvolvimento, com:
 	 	window.alert,
 	 	window.confirm,
 	 	window.prompt.
+	 	
+	 	
+	 	<!DOCTYPE html> <!--html é uma linguagem de marcação/conteúdo-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style> /* css é uma linguagem de folhas de estilos */
+        body{
+            background-color: rgb(47, 47, 90);
+            color: #ffffff;
+            font: normal 20pt arial;
+        }
+        
+        h1{
+            color: rgb(199, 199, 41);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p> <!--Geralmente o script ficará antes da tag </body> para que ele primeiro carregue o arquivo base e depois os scripts-->
+
+    <script>
+        window.alert('Minha primiera mensagem!');
+        window.confirm('Está gostando do JS?');
+        window.prompt('Qual o seu nome?');
+    </script>
+
+</body>
+</html>
+
+
+
+
 	 
 
 *************************************************		
@@ -305,7 +343,7 @@ Preparando o ambiente de desenvolvimento, com:
 		
               ---------------------------------------
 		Aula 5 – Variáveis e Tipos Primitivos
-	      ---------------------------------------
+	      ----------------------------------------
 	      
 (Você sabe o que são variáveis? Sabe declarar variáveis em JavaScript? Sabe quais são os tipos primitivos do JavaScript? Consegue entender o que significa colocar um valor null dentro de uma variável em JavaScript?)
 
@@ -318,15 +356,258 @@ Preparando o ambiente de desenvolvimento, com:
 	3 - SAbe identificar/diferenciar o HTML5, CSS3 e JS de um cód?
 	4 - Já sabe disparar um alertas, confirmação e pergunta?
 	
+	=> Depois que eu dei os alerts, para onde foram as informações coletados do usuário? 
 	
-	Guardar dados?
+	==>> Onde os dados foram guardados?? <<==
+	
+	
+ >  Explicou os comentários também como incluir com // e /* */  <
+ 
+ 	=> Explicando o conceito de variável usando uma metáfora de terreno onde eu não construi uma casa e sim um estacionamento onde pra cada vaga (seja pra carro, moto, caminhão ou bicicleta) foram delimitados os espaços e adicionando numeros (ou nomes) para podermos identificar, encontrar cada automóvel estacionado. Lembrndo que cada "vaga" teve um tamanho diferente já que os autompoveis não são todos do meso tamanho. (Os separamos em grupos de automóveis = a1 - a6, caminhão = c1 - c4 e motos = m1 - m8) 
+ 	Logo vaga é a variável
+ 	então a noenclatura ficou:
+ 	
+ 		 vaga a1 = carro1 (recece valor, recebe ou carro,moto ou caminhão) <=
+ 		         = carro2 (para colocar esse carro eu preciso tirar o carro1 da vaga)
+ 		         = null   (e se caso eu não queira mais aguardar mais carro nenhuma nessa vaga, eu coloco o comando null)
+ 		         
+ 		         Neste caso, aplicando para comput:
+ 		         
+ 		         - o terreno é a memória do comput e os carros são os dados.
+ 		         
+ 		         então a var recebe um nome (identificação) e atribuimos a ela um valor, ficando assim como no exemplo: (vale lembrar que as variáveis podem ter tamanhos diferentes. Seguem os exemplos - )
+ 		         
+ 		         var n1 = 8;       var s1 = "JavaScript";
+ 		         var n2 = 8.5;     var s2 = 'Curso em Vídeo';
+ 		         var n3 = 15;      var s3 = `Guanabara`; 
+ 		         
+ Sobre os identificadores: 
+ 	Regras
+ 	------
+ 		> Podem começar com letra, $ ou _      =>  l1, $nome, _local
+ 		> Não podem começar com numeros        =>  1l, 1nome, 1local
+ 		> podemos usar letras e numeros        =>  medianota1e2
+ 		> podemos usar acentos ou simbolos     =>  média#semestre
+ 		> não podem ter eespaços               =>  media do semestre
+ 		> e não podem ser palavras reservadas  =>  var alert
+ 		
+ 	Dicas
+ 	-----
+ 		
+ 		> maiusculas e minusculas fazem diferenças
+ 		> nomes coerentes nas variaveis
+ 		> evite se tornar um "programados alfabeto" ou um "programador contador"
+ 		
+ 	tipos de dados (Data Types)
+ 	--------------
+ 	
+ 		> number: numero = 5, -12, 24
+ 			Infinity
+ 			NaN = (NotAndNumber)
+ 			
+ 		> string: cadeia de caraceteres (numeros de telefone e cpf são considerado strings pois não contém só numeros) = "George", 413.560.848-50, (11) 98758-8455
+ 		
+ 		> boolean: valores booleanos = true, false
+ 		
+ 		ainda temos:
+ 			
+ 			Null = Nulo 
+ 			Undefined = Indefinido
+ 			Object (Já que JS é uma ling. OO - Orientada a Objeto)
+ 				array (vetor)
+ 			Function (também é um tipo primitivo no JS já que ela também funciona no paradigma funcional e considerar uma function um tipo é algo muito interessante)
+ 			
+ 			podemos usar o typeof no JS pra saber qual é o tipo primitivo no node.
+ 		
+ 		         
+	      			
+	      
+	      <!DOCTYPE html> <!--html é uma linguagem de marcação/conteúdo-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style> /* css é uma linguagem de folhas de estilos */
+        body{
+            background-color: rgb(47, 47, 90);
+            color: #ffffff;
+            font: normal 20pt arial;
+        }
+        
+        h1{
+            color: rgb(199, 199, 41);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p> <!--Geralmente o script ficará antes da tag </body> para que ele primeiro carregue o arquivo base e depois os scripts-->
+
+    <script> // Estamos inserindo a var
+        var nome = window.prompt('Qual o seu nome?');
+        window.alert('É um grande prazer em te conhecer, ' + nome + '!'); // simbolo de + se lÊ como concatenação.
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(47, 47, 90);
+            color: #ffffff;
+            font: normal 20pt arial;
+        }
+        
+        h1{
+            color: rgb(199, 199, 41);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Digite um número: ')); // <= Deixei essa linha com o Number.parseInt para ficar de exemplo // string - o prompt já entende, independente do valor que isso é uma string.
+        var n2 = Number(window.prompt('Digite outro número: ')); // string // Não precisa ser Number.parseInt, pode ser soó parseInt (porém no JS atual eu posso colocar só Number(n) e eu deixo o JS decidir o que é: se o numero é inteiro ou real)
+        var s = n1 + n2 
+        // Tanto faz eu colocar window.alert como só alert
+        //alert('A soma dos valores é ' + s) // <= temos que converter isso tudo para numero.
+        // concatenação // Como forçar o JS a entender que isso é uma soma?
+        // Mas o JS funciona assim: 
+        // number + number = para adição (então com um number de um lado e um number do outro dará number),
+        // string + string = para concatenação
+
+        //utilizando template strings:
+        alert(`A soma de ${n1} e de ${n2} é igual a ${s}`);
+
+        /* 
+        string > numero
+
+            Usamos Number.parseInt(n)   ou <= para numeros inteiros => parse é de converter/passear *** NÃO SE ESQUEÇA: o JS é casesensitive então o N de number precisa ser maiusculo assim como o I do int e o F do float.
+                   Number.parseFloat(n)    <= para numeros reias, com virgulas => na prog seria ponto (ponto flutuante ou float point)
+                
+        numero > string
+            Usamos String(n)      ou
+                   n.toString()     ficando assim:
+
+                   alert('A soma dos valores é ' + String(s))    ou
+                   alert('A soma dos valores é ' + s.toString())
+
+                   FORMATANDO STRING ***
+                        var s = "JavaScript"
+                        ' Eu estou aprendendo s ' // não faz a interpolação
+                        ' Eu estou aprendendo ' + s // usa concatenação
+
+                    TEMPLATES STRINGS - Formatador de strings
+                        ` Eu estou aprendendo ${s} `  // template string (com a crase) // simbolo placeholder ${n}
+                    
+                    AINDA PODEMOS USAR:
+                        var s = "JavaScript"
+                        s.length // Quantos caracteres a string tem
+                        s.toUpperCase() // Pra deixar todas as letras MAIÚSCULAS
+                        s.toLowerCase() // tudo em minúsculas
+        */
+    </script>
+
+</body>
+</html>
 	      
 	      
 	      
 	      
 	      
-		Aula 6 – Tratamento de dados
+	       -------------------------------
+		 Aula 6 – Tratamento de dados
+	       -------------------------------
+	       
+	       
+(Você já aprendeu a manipular dados em JavaScript? Sabe como guardar o resultado de um prompt dentro de uma variável? Sabe converter String para Número em JavaScript? Consegue formatar um número para que ele se pareça com um valor monetário usando JavaScript?)
+
+> Guanabara ask...
+------------------
+
+
+		1 - O que é uma variável?
+		2 - Como declarar uma variável inteira ou real no JS?
+		3 - Quais são os tipos primitivos no JS?
+		4 - O que significa colocar valor Null numa variável?
+		
+		
+	 ${Manipulação de Dados}
+	 
+	 	O que é let, const, NaN?
+	 	
+	 
+	 <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex004</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var nome = prompt(`Qual é o seu nome? `); // ou window.prompt
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras!</br>`); 
+        document.write(`O seu nome em MAIÚSCULAS é ${nome.toUpperCase()}! </br>`);//o () chama o método, por isso não pode esquecer de colocar se não ele não executa a função! // writeln = quebra linha
+        document.write(`O seu nome em minúsculas é ${nome.toLowerCase()}!`)
+        //document.write(`<h1>Seu nome tem ${nome.length} letras!</h1>`); // s.length visto no ex003
+        //incluimos a tag <h1> na linha docódigo. Até aonde eu entendi, toda a linha deve ser colocada dentro da crase quando a mesma for utilizada
+            
+
+        /*
+            FORMATAÇÃO DE NÚMEROS
+                var n1 = 123.7
+                s.toFixed(2) // Para fixo com duas casas
+                s.toFixed(2).replace('.',',') // trocar de lugar a primeira aspas simples pela segunda!
+                
+                > n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+                'R$ 1,234.70' // No node volta ao padrão, mas no navegador, ele converte direitinho, as se você quiser pode acrescentar o replace.
+                > n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+                'US$ 1,234.70'
+                > n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}).replace('.',',')
+                '€ 1,234.70'
+                // parte localizada = para localizar (parte seria parte do mundo, ou seja, pt-BR é para o Brasil) - {entre chaves vamos colocar os atributos, é 'meio que um OBJETO' - style: 'currency' = valor monetário - currency: 'BRL' = valor do Brasil / 'USD' = dólar / 'EUR' = Euro} <= Exemplo para falar de um salário
+        */
+    </script>
+
+</body>
+</html>
+	       
+	       
+	       
+	       
+	       
+	       -----------------------------
 		Aula 7 – Operadores (Parte1)
+	       -----------------------------
+	       
+	       
+	       
+	       
 		Aula 8 – Operadores (Parte 2)
        
        
