@@ -107,9 +107,25 @@ Tecnologias:
 > Guanabara ask...
 ------------------
 
-	1 - Diferença entre um cliente e um servidor da internet?
-	2 - Para que serve HTML, CSS e JS?
-	3 - 4 sites que fazer o uso do JS?
+	1 - Diferença entre um cliente e um servidor da internet? 
+			
+			CLIENTE É O USUÁRIO, QUEM SOLICITA AS INFOS E O SERVIDOR É QUEM FORNECE O QUE FOI SOLICITADO PELO USUÁRIO, QUEM ENVIA UMA 				CÓPIA PARA O BROWSER SOBRE AS INFOS CONVOCADAS. O BROWSER ABRE AS INFOS (ARQUIVOS) PARA QUE O USUÁRIO POSSA "LÊ-LAS".
+			
+			
+	2 - Para que serve HTML, CSS e JS? 
+	
+			HTML = CUIDA DO CONTEÚDO DA PÁGINA
+			CSS = CUIDA DO ESTILO DE COMO O CONTEÚDO DO HTML SERÁ APRESENTADO PARA O USUÁRIO
+			JS = CUIDA DA PARTE INTERATIVA COM O USUÁRIO (INTERAÇÃO, O CONTRÁRIO DE PÁGINA ESTÁTICA).
+			
+			
+	3 - 4 sites que fazem o uso do JS?
+			
+			* YOUTUBE
+			* GOOGLE
+			* AMAZON
+			* AMERICANAS.
+			
 
 ${Evolução do JS}
 
@@ -222,6 +238,11 @@ várias bibliotecas, frameworks, sdks, etc para a criação de jogos
         else:
             pass} by Well
 
+
+
+---------------------------------------------------------------------
+
+
 		 
 	       ------------------------------------
 		Aula 3 – Dando os primeiros passos
@@ -235,10 +256,25 @@ várias bibliotecas, frameworks, sdks, etc para a criação de jogos
 
 	      
 	1 - Que empresa criou o JavaScript?
+	
+			A FINADA NETSCAPE.
+			
+			
 	2 - JAVA e JavaSript tem alguma relação?
+	
+			NÃO, APESAR DE AMBAS TEREM CIDO CRIADAS A PARTIR DA LINGUAGEM C, A ÚNICA RELAÇÃO QUE ELAS TEM É QUE O JAVA DO JAVASCRIPT FOI APENAS UMA JOGADA DE MARQKETING DO BATISMO DO NOME, POR SER ALGO QUE JÁ VENDIA/FOI MUITO BEM ACEITO PELO MERCADO.
+				
+				
 	3 - O que o ECMAScript tem a ver com o JavaScript?
+	
+			ECMAScript É A EMPRESA EUROPÉIA QUE PADRONIZOU O js.
+			
+			
 	4 - Sabia que o programa Whatsapp desktop é criado em JavaScript?
-
+			
+			Sim, ASSIM COMO O DISCORD, SLACK, ENTRE TANTOS OUTROS.
+			
+			 
 => Como aprender?
 	
 	*Ver vídeos
@@ -261,6 +297,10 @@ Preparando o ambiente de desenvolvimento, com:
 	VS Code 
 	NodeJS
 	
+	
+	
+---------------------------------------------------------------------		
+		
 		
 		
 	   ----------------------------------------
@@ -269,13 +309,37 @@ Preparando o ambiente de desenvolvimento, com:
 	   
 (Você já sabe diferenciar dentro do seu código, os trechos em HTML5, em CSS3 e em JavaScript? Sabe organizar as pastas do seu projeto dentro do Visual Studio Code? Sabe como testar se o Node.js está devidamente instalado? Já sabe utilizar os comandos alert, confirm e prompt do JavaScript?)	
 
+
 > Guanabara ask...
 ------------------
 
+
 	1 - Que livros/documentos foram recomendados na aula passada como bibliografia e base de leitura do curso?
+	
+			OS LIVROS: JAVASCRIPT, O GUIA DEFINITIVO e JAVASCRIPT: O GUIA DO PROGRMADOR e
+			OS SITES OFICIAIS DO MOZILLA (MDN) e DO ECMASCRIPT.
+			
+						
 	2 - Para aprender JS, precisamos saber inglês?
+	
+			AJUDA? COM CERTEZA! PRECISA? NÃO! hOJE EM DIA JÁ TEM MUITOS SITES, ARQUIVOS E ETC TRADUZIDOS PARA O PT.
+			
+			
 	3 - Que dicas foram dadas para quem quer estudar, metódos de estudo?
+	
+			* ANOTE
+			* PRATIQUE
+			* DESENVOLVA SEUS PRÓPRIO PROJETOS
+			* ESTUDE COM DUAS TELAS, ETC
+			
+			
 	4 - Quais programas foram instalados para podemos fazer o curso com nosso ambiente de desenvolvimento de estudo montado?
+	
+			3 ARQUIVOS:
+			 - Node.JS
+			 - Google Chrome
+			 - VS Code
+			 
 	
 
 		${Nossos primeiros Scripts}		
@@ -325,7 +389,7 @@ Preparando o ambiente de desenvolvimento, com:
 </html>
 
 
-
+---------------------------------------------------------------------
 
 	 
 
@@ -352,9 +416,32 @@ Preparando o ambiente de desenvolvimento, com:
 
 
 	1 - Como gerenciar pastas no VS Code?
+	
+			SIM, COM FOLDER OU FILE
+			
+			
 	2 - NodeJS ta instalado no seu pc? Pra que serve o NodeJS?
+	
+			SIM, ELE FAZ COM QUE POSSAMOS RODAM O CÓDIGO FORA DO BROWSER
+			
+			
 	3 - SAbe identificar/diferenciar o HTML5, CSS3 e JS de um cód?
+	
+			SIM, O HTML ABRE O ARQUIVO COM <!DOCTYPE html> E FECHA COM </html>. O CSS PODE SER EM ARQUIVO INTERNO OU EXTERNO (INTERNAMENTE PODEMOS IDENTIFICÁ-LO ENTRE AS TAGS <style> e </style> E JS GERALMENTE VEREMOS ELE ANTES DA TAG </BODY>, ENTRE AS TAGS <script> e </script>)
+			
+			
+			
 	4 - Já sabe disparar um alertas, confirmação e pergunta?
+			
+			SIM, COM OS COMANDOS:
+				EX - 
+				
+				window.alert('Seja bem vindo ao JS! ');
+				confirm('Está gostando do Curso em Vídeo? ');
+				prompt('Qual é o seu nome? ');
+				
+				
+				
 	
 	=> Depois que eu dei os alerts, para onde foram as informações coletados do usuário? 
 	
@@ -456,9 +543,57 @@ Preparando o ambiente de desenvolvimento, com:
 
 
 
+---------------------------------------------------------------------
+
+	      
+	       -------------------------------
+		 Aula 6 – Tratamento de dados
+	       -------------------------------
+	       
+	       
+(Você já aprendeu a manipular dados em JavaScript? Sabe como guardar o resultado de um prompt dentro de uma variável? Sabe converter String para Número em JavaScript? Consegue formatar um número para que ele se pareça com um valor monetário usando JavaScript?)
+
+> Guanabara ask...
+------------------
 
 
-!DOCTYPE html>
+		1 - O que é uma variável?
+		
+				UM LOCAL DA MEMÓRIA ONDE GUARDAMOS INFOS.
+				
+				
+		2 - Como declarar uma variável inteira ou real no JS?
+		
+				NO JS NÃO FAZ A DIFERENÇA ENTRE INT OU FLOAT (DIFERENTES DE ALGUMAS OUTRAS LINGUAGENS QUE PRECISAM SER DECLARADAS NO INÍCIO.) MAS CASO VOCÊ PRECISE CONVERTER UM NUMBER PARA UMA STRING, AI SERÁ NECESSÁRIO SABER DIFERENCIAR NÚMEROS REAIS DOS INTEIROS.
+				
+				
+		3 - Quais são os tipos primitivos no JS?
+		
+				Um primitivo (valor primitivo, tipo de dados primitivo) é um dado que não é representado através de um Objeto e, por consequência, não possui métodos. (DEFINIÇÃO MDN)
+				
+				SÃO ELES:
+				
+					* STRING
+					* NUMBER
+					* BOOLEAN
+					* NULL
+					* UNDEFINID
+					* Symbol (novo no ECMAScript 6)
+					
+					
+		4 - O que significa colocar valor Null numa variável?VA
+				
+				VALOR NULL QUER DIZER NULO*
+				
+				
+		
+		
+	 ${Manipulação de Dados}
+	 
+	 	O que é let, const, NaN?
+	 	
+	 
+	 !DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -527,32 +662,10 @@ Preparando o ambiente de desenvolvimento, com:
 
 </body>
 </html>
-	      
-	      
-	      
-	      
-	      
-	       -------------------------------
-		 Aula 6 – Tratamento de dados
-	       -------------------------------
-	       
-	       
-(Você já aprendeu a manipular dados em JavaScript? Sabe como guardar o resultado de um prompt dentro de uma variável? Sabe converter String para Número em JavaScript? Consegue formatar um número para que ele se pareça com um valor monetário usando JavaScript?)
-
-> Guanabara ask...
-------------------
-
-
-		1 - O que é uma variável?
-		2 - Como declarar uma variável inteira ou real no JS?
-		3 - Quais são os tipos primitivos no JS?
-		4 - O que significa colocar valor Null numa variável?
-		
-		
-	 ${Manipulação de Dados}
 	 
-	 	O que é let, const, NaN?
-	 	
+	 
+	 
+	 
 	 
 	 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -598,18 +711,180 @@ Preparando o ambiente de desenvolvimento, com:
 </html>
 	       
 	       
-	       
+	
+	
+
+---------------------------------------------------------------------
+   
 	       
 	       
 	       -----------------------------
 		Aula 7 – Operadores (Parte1)
 	       -----------------------------
-	       
-	       
-	       
-	       
-		Aula 8 – Operadores (Parte 2)
+
+(Você já sabe como fazer cálculos usando JavaScript? Conhece os operadores aritméticos do JavaScript? Consegue entender a ordem de precedência dos operadores em JavaScript? Consegue utilizar os operadores de incremento (pré-incremento e pós-incremento) no JavaScript?)
+
+
+> Guanabara ask...
+------------------
        
+	1 - Como é possível guardar um valor digitado num prompt() dentro de uma variável?
+	
+			DECLARANDO A VARIÁVEL NO INÍCIO DO CÓDIGO. EX:
+			
+				var nome = prompt(`Qual é o seu nome??`);
+				
+			DESSA MANEIRA, QUANDO VOCÊ DIGITAR O SEU NOME NO PROMPT QUE APARECER NA SUA TELA, ELE SERÁ ARQUIVADO NA VARIÁVEL "NOME" JÁ QUE FOI ASSIM QUE A DECLARAMOS!
+			
+			
+	2 - Como fazer com que um número digitado num prompt() possa ser usado em cálculos?
+	
+			NÓS O CONVERTEMOS O PROMPT DE STRING PARA NUMBER, JÁ QUE TODO PROMPT POR REGRA RECEBE UM VALOR COMO STRING:
+					
+				var n1 = Number(prompt('Digite um número: ')); 
+					ASSIM DEIXAMOS O JS DECIDIR SE SERÁ NÚMERO INTEIRO OU REAL, POIS NÃO O DECLARAMOS
+						
+							OU
+							
+				var n2 = Number.parseFloat(window.prompt('Digite outro número: ')); //Pode ser só prompt, sem o window
+					ASSIM, JÁ DECLARAMOS QUE O VALOR RECEBIDO É REAL (OU parseInt, PARA NÚMEROS INTEIROS)
+						
+						
+	3 - Como transformar um texto todo para letras MAIÚSCULAS?
+	
+			ADICIONAMOS ASSIM O CÓDIGO:
+				
+				n.toUpperCase()
+						ou
+				n.toLowerCase() 
+						PARA DEIXAR TUDO EM minúsculas.
+				
+						
+	4 - Como mostrar um número formatado como um valor monetário?
+	
+			ADICIONAMOS ASSIM O CÓDIGO:
+				n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+	       
+	       
+	       
+	       
+	       ************
+	        OPERADORES
+	       ************
+	       
+	       	> Aritméticos
+	       	> Atribuição
+	       	> Relacionais 
+	       	> Lógicos
+	       	> Ternário
+	       	
+	       	* Esses acima são só alguns exemplos.
+	       	Outro exemplo é o typeOf, que te fala que tipo primitivo é o seu valor.
+	       	
+	       	
+	       	
+	       	=> Aritméticos:
+	       	---------------
+	       		
+	       		Operadores binários (precisam de 2 operandos)
+	       		
+	       			+	5+2	=>	7
+	       			-	5-2	=>	3
+	       			*	5*2	=>	10
+	       			/	5/2	=>	2.5	(para o JS)
+	       			%	5%2	=>	1	(resto)
+	       			**	5**2	=>	25	(potencia / surgiu nos ECMAScripts mais recentes)
+	       			
+	       		Ordem de Precedência = solução dos operadores =>
+	       			
+	       			Sempre da esquerda pra direita
+	       			
+	       				1º	( )
+	       				2º	**
+	       				3º	*, / e %
+	       				4º	+ e -
+	       				
+	       		
+	       	=> Atribuição:
+	       	--------------
+	       	
+	       		Atribuição simples (*Não seja um prog ALFABETO* rs)
+	       		
+	       			var a	=  5+3		8
+	       			var b	=  a%5		3
+	       			var c	=  5*b**2	45
+	       			var d	=  10-a/2	6
+	       			var e	=  6*2/d	2
+	       			var f	=  b%e+4/e	3
+	       		
+	       		Auto-atribuições (quando eu já dou o valor pra var)
+	       			
+	       			var n = 3		3 
+	       			
+	       			n = n + 4		7 <= deixa de valer 3 para valer 7 
+	       			n = n - 5		2 <= deixa de valer 7 para valer 2
+	       			n = n * 4		8 <= deixa de valer 2 para valer 8
+	       			n = n / 2		4 <= deixa de valer 8 para valer 4
+	       			n = n ** 2		16<= deixa de valer 4 para valer 16
+	       			n = n % 5 		1 <= deixa de valer 16 para valer 1
+	       			
+	       			SIMPLIFICANDO 	(só vale se for para ele mesmo. Ex: n = n + 4. Se for n = x + 4 não pode > dará errado)
+	       			
+	       				n += 4
+	       				n -= 5
+	       				n *= 4
+	       				n /= 2
+	       				n **= 2
+	       				n %= 5
+	       				
+	       	=> Incremento:
+	       	--------------
+	       			
+	       		Já entendemos que:
+	       		
+	       			var x = 5
+	       			
+	       			x = x + 1	=>	x += 1		
+	       			x = x - 1	=>	x -= 1	
+	       			
+	       			SIMPLIFICANDO
+	       			
+	       				x++				<= vai depender de que ordem você precisa:
+	       				x--				Incremento ou Decremento
+	       					ou
+	       					
+	       						++x		<= pré-incremento ou pré-decremento
+	       						--x		
+	       			
+	       			   
+	       
+	       
+---------------------------------------------------------------------	       
+	       
+	       
+	       --------------------------------
+		 Aula 8 – Operadores (Parte 2)
+	       --------------------------------
+       
+       
+       
+> Guanabara ask...
+------------------       
+       
+       
+       ... continuando:
+       		> Relacionais 
+	       	> Lógicos
+	       	> Ternário 
+	       	
+	       	
+	       	
+	       	
+	       	
+	       	
+	       	
+	       	
+	       	
        
 Módulo C: Entendendo o DOM
 2 Aulas
