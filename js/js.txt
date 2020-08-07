@@ -37,9 +37,13 @@ Tecnologias:
 *********************************************
 
 	>> 4 Aulas <<
+	
+	
+	
 		-----------------------------------------------
 		 Aula 1 – O que o JavaScript é capaz de fazer?
 		-----------------------------------------------
+		
 		
 		${O QUE O JS FAZ?} = QUASE TUDO!!! é basicaente um client side!
 		
@@ -405,9 +409,13 @@ Preparando o ambiente de desenvolvimento, com:
 		- operações com dados
 		
 		
+		
+		
+		
               ---------------------------------------
 		Aula 5 – Variáveis e Tipos Primitivos
 	      ----------------------------------------
+	      
 	      
 (Você sabe o que são variáveis? Sabe declarar variáveis em JavaScript? Sabe quais são os tipos primitivos do JavaScript? Consegue entender o que significa colocar um valor null dentro de uma variável em JavaScript?)
 
@@ -868,26 +876,606 @@ Preparando o ambiente de desenvolvimento, com:
        
        
        
+(Você já conhece os operadores relacionais e os operadores lógicos em JavaScript? Sabe a diferença entre usar = ou == ou === em JavaScript? Conhece a ordem de precedência dos operadores do JavaScript? Sabe como usar o operador ternário para atribuições em JavaScript?)
+
+
+
+       
 > Guanabara ask...
 ------------------       
        
+
+	1 - Pra que serve o simbolo de porcentagem % no JS? Seria pra calcular %?
+	
+			PARA DAR O VALOR DO RESTO DE UMA DIVISÃO
+			
+	
+	2 - 6 + 4 / 2 é igual a 5 ou a 8?
+	
+			8!!!!! => COMO VISMOS: 6 + (4 / 2) = 6 + 2 = 8 ✓
+			
+	
+	3 - Se um variável n esttá valendo 10 e executamos um n+=5, que será o seu novo valor?
+	
+			n = 10
+			
+			n+=5, é o mesmo que => n = n + 5 => n = 10 + 5, que é o valor de 15!
+			
+			n passa a valer 15 ✓
+			
+	
+	4 - O que acontece quando colocamos o valor ++ e -- ao lado de uma variável??
+			
+			AUMENTAMOS 1 OU DIMINUIOS 1, ISSO TERÁ DIFERENÇA SE OS SINAIS FOREM APLICADOS ANTES OU DEPOIS DA VALERIÁVEL (++n ou n++, assi como --n ou n--)
+
        
+       
+       
+       ****************
        ... continuando:
-       		> Relacionais 
-	       	> Lógicos
-	       	> Ternário 
-	       	
-	       	
-	       	
-	       	
-	       	
-	       	
-	       	
-	       	
-	       	
+       ****************
        
-Módulo C: Entendendo o DOM
-2 Aulas
+       		[ > Relacionais 
+	       	  > Lógicos
+	       	  > Ternário ]
+	       	
+	       	
+	       	=> Relacionais:
+	               ----------------
+	               
+	               > maior
+	               < menor
+	               >= maior ou igual que 
+	               <= menor ou igual que
+	               == igual
+	               != diferente		==>> o resultado sempre será um valor booleano = verdadeiro ou falso (true or false)
+	               			
+	               			==>> Quando tivermos na mesma linha operadores aritméticos e operadores relacionais, 1º resolvemos os aritméticos e depois os relacionais.
+	               			
+	               
+	               	5 > 2	true
+	               	7 < 4	false
+	               	8 >= 8	true
+	               	9 <= 7	false
+	               	5 == 5	true
+	               	4 != 4	false
+	       	
+	       	
+	       	* Identidade * (ou operador de igualdade restrita)
+	       	
+	       	5 == 5	=> true
+	       	5 == '5' => true 	(isso por que ele - os sinais de igualdade - não testa o tipo, então ao invés de intender como string, entenderá como number.)
+	       	5 === '5' => false	(como os 3 sinais de = ele testará se o eles são do mesmo valor e do mesmo tipo, ou seja, se eles são exatamente identicos. Sendo assim: false! E 5 === 5 => true, são identicos.)
+	       	=> Ou desigual restrito 5 !== 5 (são de tipos diferentes.)
+	       	
+	       	Ex:
+	       		
+	       		> var x = 5
+					undefined
+				> var y = '5'
+					undefined
+				> typeof x
+					'number'
+				> typeof y
+					'string'
+				> x == y
+					true
+				> x === y
+					false
+				> x != y
+					false
+				> x !== y
+					true
+					
+					
+			
+			
+			=> Lógicos:		
+			-----------
+			
+				!	Não 	- negação   (operador unário)
+				&&	E	- cojunção  (binário)
+				||	Ou	- disjunção (binário)
+	       	
+	       	
+	       	! true  => false
+	       	! false => true
+	       	
+	       	
+	       	true   &&  true  => true
+	       	true   &&  false => false
+	       	false  &&  true  => false
+	       	false  &&  false => false
+	       	
+	       	
+	       	true   ||  true  => true
+	       	true   ||  false => true
+	       	false  ||  true  => true
+	       	false  ||  false => false
+	       	
+	       	Ex:
+	       	
+       			> var a = 5
+					undefined
+				> var b = 8
+					undefined
+				> true && false
+					false
+				> true && true
+					true
+				> false || false
+					false
+				> true || true
+					true
+				> false || true
+					true
+				> a > b && b % 2 == 0 ***
+					false
+				> a <= b || b / 2 == 2
+					true
+					
+					*** IMPORTANTE *** 
+						
+						NA OPERAÇÃO ACIMA, A ORDEM DE RESOLUÇÃO É => 
+					
+					1 - OP. ARITMÉTICOS	((), **, /, ...) na ordem que já sabemos.
+					2 - OP. RELACIONAIS	(>, <, >=, <=, ...) não tem ordem certa, resolvemos os que aparecerem primeiro por ordem de precedência, da esquerda pra direita.
+					3 - OP. LÓGICOS	(!, &&, ||) <= nessa ordem.
+					
+					
+						E SE TIVERMOS MAIS DE UM OPERADOR LÓGICO NA MESMA OPERAÇÃO, A ORDEM DE RESOLUÇÃO É = >
+					
+					1 - !  Não
+					2 - && E
+					3 - || Ou
+       		
+       		
+       		=> Ternário:
+       		------------
+       		
+       			? :	dentro de uma mesma expressão (ternário por ter 3 partes)
+       			
+       			teste	?	true	:	false
+       			
+       		Ex:
+       			
+       			media >= 7	? 	'aprovado'	:	'reprovado'
+       			
+       			
+       			=> ENTÃO É UM TESTE QUALQUER E O QUE ACONTECERÁ SE: 
+       			
+       			1 - ? TESTE FOR VERDADEIRO e
+       			2 - : TESTE FOR FALSO
+       			
+       			
+       		Ex:
+       		
+       			> var media = 5.5
+					undefined
+				> media > 7 ? "aprovado" : "reprovado"
+					'reprovado'
+				> media += 3
+					8.5
+				> media > 7 ? "aprovado" : "reprovado"
+					'aprovado'
+					
+					
+			Outro Ex:
+			
+				> var x = 8
+					undefined
+				> var res = x % 2 == 0 ? 5 : 9 ****
+					undefined
+				> x
+					8
+				> res
+					5
+				> var idade = 19
+					undefined
+				> var r = idade >= 18 ? 'MAIOR' : 'MENOR'
+					undefined
+				> r
+					'MAIOR'
+					
+					
+					**** NA OPERAÇÃO ACIMA:
+					
+						> resolvendo =>    
+								var x = 8
+								res = x % 2 == 0 ? 5 : 9
+							
+				(res = x % 2 == 0) ------- OITO RESTO DOIS IGUAL A ZERO? SIM! OITO DIVIDO POR DOIS É QUATRO QUE SOBRA ZERO!
+					|	   
+					|___________________ x % 2 = 8 % 2 => 0
+						
+							     0 == 0 => verdade	------- ZERO É IGUAL A ZERO
+								 
+								 (? 5 : 9) ----------- SENDO VERDADEIRO X RECEBE 5!
+									   	
+									   	
+									   	
+									         -----------------
+									        | - então, x = 5  |
+									         -----------------
+					
+       			
+       	ENTÃO:
+       	
+       		NA ORDEM DE PRECEDÊNCIA SOB RESOLUÇÃO DE OPERAÇÕES:
+       		
+       			1 - ARITMÉTICOS
+       			2 - RELACIONAIS
+       			3 - LÓGICOS
+       			4 - TERNÁRIO
+       
+       
+       
+---------------------------------------------------------------------
+
+	 
+
+**********************************		
+   => Módulo C: Entendendo o DOM
+**********************************
+
+       >> 2 Aulas <<
+       
+		- Introdução ao DOM
+		- Eventos DOM
+		
+		
+			=> Entendendo o que é o Document Object Movel ou DOM, vertente web para qual o JS foi criada. Uma poderosa ferramenta que tá dentro do navegador, um conjunto de objetos do JS para o tratamento de componentes visuais, para criar aplicações mais "bonitinhas". 
+			=> Aprender a fazer uma árvore DOM do site.
+			=> Manipular árvores DOM de qualquer site.
+		
+		
+              -----------------------------
+		Aula 9 – Introdução ao DOM
+	      ------------------------------   
+       
+
+(Você sabe o que significa a sigla DOM? Sabe para que serve o Document Object Model? Sabe como criar uma árvore DOM para o seu site? Sabe como usar o JavaScript para manipular o DOM? Sabe para que servem os elementos Parent e Child em um DOM? Sabe utilizar os métodos getElementByTagName, getElementById, getElementByName, getElementByClassName, querySelector de acesso ao DOM no JavaScript?)
+       
+       
+
+> Guanabara ask...
+------------------
+
+		1 - Qual a diferença entre usar =, ==, === no JS?
+		
+				= significa 'recebe'. Então uma x variável recebe tal valor;
+				== isso significa 'igual', mas neste caso não diferencia o tipo primitivo;
+				=== isso significa 'igualdade restrita', ou seja será realmente igual se valor e tipo priitivo forem iguais.
+				
+				
+		2 - Em uma mesma expressão, temos os operadores || e &&. Qual deles é resolvido primeiro?
+		
+				o operador && e depois o ||. No caso, tendo o !não, este é primeiro em seguida do && e por fim o ||.
+				
+				
+		3 - Sabe usar o operador ternário para colocar um entre dois valores em uma variável?
+		
+				Sim! 
+				EX: 
+					var idade = 17
+					
+					idade >= 18 ? "Maior de idade" : "Menor de idade"
+					
+					   
+		
+		
+	${Entendendo o DOM:}
+	
+		=>> O que é o DOM???
+		
+					DOM é um acrônimo para Document Object Model (Modelo de Objetos pra Documentos). Basicamente é um conjunto de objetos dentro do seu navegador que vai dar acesso aos componente internos do seu website. O Dom não funciona dentro do Node.JS, por exemplo, o dom está presente quando eu estou rodando o JS dentro do meu navegador. 
+					
+		=>> Árvore DOM
+				
+				É muito importante sabermos fazer a árvore DOM do nosso site. Ela começa da raiz, e a raiz do navegador nós chamamos de window. Dentro do window temos vários objetos (3 exs: [location - diz qual é a localização da sua página / qual é a URL da sua página / qual é a página atual / qual foi a oáfina anterior], [document - documento atual / página atual], [history - que vai guardando de onde você veio / pra onde você vai = isso facilita muito a navegaçõ dentro do seu site])
+		Dentro de document temos html, que é exatamente a parte html do meu site.
+		Dentro de html, temos basicamente dois filhos: head e body.
+		- Dentro de head temos meta, title, etc.
+		- Dentro de body (para o documento que foi criado para essa aula) temos h1, p, p, div.
+		
+		- Dentro do 2º parágrafo temos strong e em que são child de p.
+		
+				{A árvore DOM é uma árvore hierarquica, basicaente como uma árvore genealógica, onde o que vem abaixo são filhos e os acima são pais (child e parent). O único que não é filho é a window, todo o resto em algum momento pode ser pai ou filho de alguém.}
+				
+				Tem muitas maneiras de acessar os elementos da árvore. => Elemento é qualquer coisa que apareceu na árvore DOM. 
+
+
+							      ---------
+								window
+							      ---------
+							     	  | 
+					    _____________________|_______________________
+					    |			  |			  |
+					----------	     ----------	      ---------
+					 location	      document	               history
+					----------	     ----------	      ---------
+								  |
+							       ------
+							        html
+							       ------
+							          |
+							__________|___________
+						       |                      |
+						    ------          	     ------
+						     head      	      body
+						    ------		     ------
+						       |			|
+                                            _________|_________           ___|______________________________
+					     |			 |	    |         |	   |		|
+					   ------            -------     ----       ---         ---        -----
+					    meta              title       h1	       p	   p          div
+					   ------            -------     ----       ---         ---        -----
+												   |
+												--------
+												 strong
+												--------
+												
+												
+												
+			E ai nós precisamos selecionar esses elementos para poder navegar dentro da minha árvore DOM:
+			
+			5 exs:
+			
+			podemos acessar => 
+			
+			- por marca (por tag);
+				getElementsByTagName()[] <= mais de um objeto, pois elements está no plural, sendo assim e o indico dentro dos colchetes.
+			- por id;
+			- por nome;
+			- por classe;
+			- por seletor (css que é mais recente);
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primieros passos com o DOM</title>
+    <style>
+        body{
+            background-color: #4a4c8a;
+            color: #ffffff;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em <em>JavaScript</em></p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        
+        
+        // window.document.write('Olá, Mundo!') fomos por JS, por DOM add componentes *Explicação Guanabara* Não é a melhor aneira de add componetes mas é a mais simples!!
+
+        
+        
+        /* => Não preciso usar o window. document (pode ser só document) 
+
+        Assim podemos obter infos/configs da página:
+            podemos: window.document.write(window.document.charset) => mostrará qual o charset da pág. (que nesse caso mostrará o UTF-8)
+                     window.document.write(window.navegator.appName) => mostrará em qual navegador o site está rodando.
+                     window.document.write(window.document.URL) = > mostrará qual URL, qual o endereço da pág.(que nesse caso é http://127.0.0.1:5500/aula9/ex005.html)
+         */
+
+
+         
+         
+         
+         /* SELECIONANDO OBJETOS
+            	
+            	- por marca (tag);
+            	- por id;
+		- por nome;
+		- por classe;
+		- por seletor (css que é mais recente);
+
+            
+            
+            
+            
+            => getElementsByTagName()
+
+                var p1 = window.document.getElementsByTagName('p')[0] <= dentro do parenteses eu coloco qual tag eu quero acessar;
+                    
+                    tudo o que estiver dentro de colchetes acessará cada linha da tag
+                    e a contagem começa do 0, ou seja, a linha ou a 1ª tag <p> será 0, a 2ª tag <p> será 1 e assim sucessivamente.
+                
+                document.write(p1.innerText) <= p1 - variável declarada. <= innerText - seleciona o texto que está dentro da tag
+                document.write(p1.innerHTML) <= seleciona a tag formatada <= podemos ainda colocar uma concatenação p/ ficar mais claro
+
+                        podemos ver melhor a diferença se criarmos um alert:
+                            window.alert(p1.innerText) <= pegas as filhas sem formatação (pega só o texto)
+                            window.alert('Está escrito assim: ' + p1.innerHTML) <= pega inclusive as tags filhas
+
+                        PODEMOS TAMBÉM:
+                            FAZER ALTERAÇÕES. EXS:
+
+                                p1.style.color = 'blue' <= É extamente o que fizemos no site do google para alterar o fundo na 1ª aula
+                                                            (MANIPULAMOS  O   D O M!!! )
+                                
+                                var corpo = window.document.body <= criamos a variável, depois
+                                corpo.style.background = 'black'
+
+            
+            
+            => getElementById() <= aqui não tem plural no element pois o ideal é que cada elemento tenha um id diferente
+                
+                Na tag div adicionamos um id
+                (id = #)
+                (class = .) => classe
+
+
+                    Declaro a variável:
+                        
+                        var d = window.document.getElementById('msg') 
+                        
+                        ==>> lembrando que a var eu não posso colocar 'div' pois div é uma palavra reservada.
+                        
+                        
+                        PODEMOS TAMBÉM:
+                            
+                            FAZER ALTERAÇÕES. EXS:
+
+                                d.style.background = 'green'
+                                d.innerText = 'Estou aguardando...' <= Novamente, originalmente a tag div estava 'clienque em mim', mas eu mandei modificar por JS através do DOM com o innerText, nessa linha de código.
+
+                                PODEMOS AINDA USAR O COMANDO COMPLETO, CASO VOCÊ VÁ USÁ-LO UMA VEZ SÓ:
+
+                                    window.document.getElementById('msg').innerText = 'Olá, mundo!' 
+                                        (porém assim, a linha fica muito grande, por isso o Guanabara declara a variável e por ela aplica as modificações.)
+            
+            
+            
+            
+            => getElementsByName()
+
+                Na tag <div> ao invés de colocar id, eu coloco 'name' e será da mesma maneira: 
+
+                    var d = document.getElementsByName('msg')[0] <= neste caso 'Elements' está no plural então eu devo colocar entre os colchetes a qual tag eu estou e referindo (a 1, a 2, 3, etc. => lembrando que a contagem começa do 0. * COMO NOS VETORES E MATRIZES DO C++ *)  
+                    d.innerText = 'Olá, mundo!'
+
+            
+            
+            
+            => getElementsByClassName()
+
+                    Assim será como por nome (getElementsByName())
+
+                        Na tag <div> ao invés de colocar id, eu coloco 'class' e será da mesma maneira: 
+
+                        var d = document.getElementsByClassName('msg')[0] 
+                        d.innerText = 'Olá, mundo!'
+
+            
+            
+            
+            => geElementByQuerySelector()
+
+                    Na tag <div> voltamos a colocar id (ou class, como preferir)
+                        
+                        var d = document.querySelector('div#msg') => id - '#' => class - '.'
+                        d.style.color = 'blue'
+
+                    
+
+         */
+         
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = document.querySelector('div#msg') // => id - '#'' => class - '.'
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>
+
+
+---------------------------------------------------------------------
+
+
+	       -----------------------
+		Aula 10 - Eventos DOM
+	       -----------------------
+	       
+	          
+(Você já entendeu como funciona o DOM com JavaScript? Sabe criar funções em JavaScript? Consegue ligar uma função a um evento em um formulário HTML5 usando JavaScript? Sabe como pegar valores dentro de caixas de texto e fazer cálculos com eles?)
+
+
+	       
+> Guanabara ask...
+------------------
+
+		1 - O que significa a sigla DOM? sabe pra que serve o DOM?
+		
+				DOM - Document Object Model (Modelo de Objetos para DOcumentos). O dom serve para manipular objetos em uma página dando acesso aos componentes internos desta.
+				
+				
+				(Definição no MDN => O Modelo de Objeto de Documento  (DOM) é uma interface de programação para documentos HTML, XML e SVG . Ele fornece uma representação estruturada do documento como uma árvore. O DOM define métodos que permitem acesso à árvore, para que eles possam alterar a estrutura, estilo e conteúdo do documento. O DOM fornece uma representação do documento como um grupo estruturado de nós e objetos, possuindo várias propriedades e métodos. Os nós também podem ter manipuladores de eventos que lhe são inerentes, e uma vez que um evento é acionado, os manipuladores de eventos são executados. Essencialmente, ele conecta páginas web a scripts ou linguagens de programação.)
+				
+				Nada mais é do um facilitador dentro do meu navegador, dentro do html5 para dar acesso aos elementos diretamente pro JS. Sem o DOm nós teríamos muita dificuldade para cessar os elementos da nossa página. 
+				
+				
+				
+		2 - Sabe montar a árvore DOM de um site simples?
+		
+				Sim, inclusive tenho ela montada na aula 9, mas basicamente temos: window -> document -> html -> body -> p -> strong <= Pode ser o exemplo de uma 'família DOM'
+				
+				
+				
+		3 - Sabe o que são os elementos Parent e os elementos Child de uma árvora DOM?
+		
+				Como na questão acima, o child vai ser o que está abaixo na árvore e parent o que está em cima. Em algum momento algum elemento será pai ou filho exatamente como uma árvore genealógica: UMA ÁRVORE HIERARQUICA.
+				
+				
+				
+		4 - Quais são os 5 principais métodos de selecionar elementos DOM dentro do JS?
+		
+				- por marca;
+				- por id;
+				- por nome;
+				- por classe;
+				- por seletor.
+
+
+
+		${O que é um evento DOM?}
+		
+			[É tudo o que possa acontecer com um elemento.]
+			
+						
+			Um exemplo disso são eventos com o mouse:
+			
+				=>> Vamos aplicar tudo a uma tag div com as seguintes formatações <<=
+				
+				<style>
+					div#area{
+					    font: normal 15pt arial ;
+					    background: green;
+					    color: white;
+					    width: 200px;
+					    height: 200px;
+					    line-height: 200px;
+					    text-align: center;
+					}
+			    	</style>
+			    	
+				
+				ENTÃO, para o : 
+			
+			- mouseenter: quando o mouse entrar na div vai disparar o 'mouseenter' (ele entrou na div)
+			- mousemove: continuar movendo o mouse por dentro da div.
+			- mousedown: cliquei e segurei, eu tenho o disparo do 'mousedown'
+			- mouseup: quando eu soltar o click, disparamos o evento mouseup'
+			- click: quando eu clico rápido (clico e solto rápido o mouse)
+			- mouseout: quando o mouse sair do 'perimetro' da div, acionamos o 'mouseout'
+			
+
+				Mas para dispararmos um evento, antes precisamos entender o que é uma função ou funcionalidade:
+				
+				Conjunto de linhas de código que serão executadas só quando o evento ocorrer. eX: digitaremos 10 linhas de código.
+				
+O bloco será nomeado com uma FUNCTION ação (parâmetros) { <= geralmente a nomeação da função é com uma ação que ela poderá executar.
+						  |		ELAS SERÃO COLOCADAS DENTRO DE UM BLOCO, com abre e fecha chaves
+						  |	  }
+                             -------------------------							  
+				podemos ainda colocar 
+				alguns parâmetros para 
+				a função.
+			     ---------------------------
+
+
+
+
 Módulo D: Condições em JavaScript
 5 Aulas
 Módulo E: Repetições em JavaScript

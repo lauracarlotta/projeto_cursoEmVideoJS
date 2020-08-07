@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primieros passos com o DOM</title>
+    <style>
+        body{
+            background-color: #4a4c8a;
+            color: #ffffff;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em <em>JavaScript</em></p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+
+        // A manipulação do DOM foi toda explicada no arquivo js.txt
+
+        var corpo = window.document.body // essa tag aqui ficu a toa! rs
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = document.querySelector('div#msg') // => id - '#'' => class - '.'
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>
