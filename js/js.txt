@@ -1784,6 +1784,191 @@ outro ex:
 				{Indentação = recuo - em inglês: indent (É o que fazemos para deixarmos o código organizado)}
 				
 				
+				
+				
+*********JS*********
+
+
+=>>>>> 
+
+var velocidade = 50
+console.log(`A velocidade do seu carro é de ${velocidade} km/h!`)
+if(velocidade>60){ // Condição simples => Se você não ultrapassou o limite você não fez mais que a sua obrigação.  
+    console.log(`Você ultrapassou a velocidade permitida. Multado!`)
+}
+console.log('Dirija sempre com o sinto de segurança!')
+
+
+
+=>>>>>
+
+/* var país = 'Brasil'
+
+console.log(`Vivendo em ${país}`)
+if (país == 'Brasil'){
+    console.log('Você é Brasileiro!')
+} else {
+    console.log('Você é Estrangeiro!')
+} */
+
+var país = 'França'
+
+console.log(`Vivendo em ${país}`)
+if (país != 'Brasil'){
+    console.log('Você é Estrangeiro!')
+} else {
+    console.log('Você é Brasileiro!')
+}
+
+
+*********HTML*********
+	
+	
+=>>>>>
+	
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+
+        input#txtvelocidade{
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvelocidade" id="txtvelocidade"> km/h.
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular(){
+            var txttv = document.querySelector('input#txtvelocidade')
+            var res = document.querySelector('div#res')
+            var Velocidade = Number(txttv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${Velocidade} km/h.</strong></p>`
+            if(Velocidade > 60){
+                res.innerHTML += `<p>Você foi <strong>MULTADO</strong> por execesso de velocidade!</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>
+
+
+=>>>>>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Extra 1: Qual a sua nacionalidade?</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Em que país você nasceu? Me conta ai!</h1>
+    <input type="text" name="nacionalidade" id="nacionalidade">
+    <input type="button" value="Quero saber!" onclick="responder()">
+    <div id="resultado"></div>
+
+    <script>
+        function responder(){
+            var nasc = document.querySelector('input#nacionalidade')
+            var resultado = document.querySelector('div#resultado')
+            var nasceu = String(nasc.value)
+            resultado.innerHTML = `Você nasceu no (a, os, as, em) ${nasceu}!`
+            if(nasceu == 'Brasil' || nasceu == 'brasil'){
+                resultado.innerHTML += `<p> Que pena amigo... <strong>Estamos no mesmo barco</strong> kkkkkkk</p>`
+                resultado.innerHTML += `<p> Mas vamos chegar lá de qualquer jeito, não é?!`
+            } else {
+                resultado.innerHTML += `<p>Você é Estrangeiro!</p>`
+                resultado.innerHTML += `<p><strong>Alguém me explica o que é que você ta fazendo aqui???????</strong></p>`
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
+
+=>>>>>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Extra 2: Você já pode votar? </title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+
+        body{
+            font-size: 18pt;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        #txtidade{
+            width: 80px;
+        }
+
+        .amarelo{
+            color: rgb(217, 221, 0);
+        }
+
+        .verde{
+            color: rgb(47, 128, 0);
+        }
+
+        .azul{
+            color: rgb(10, 10, 117);
+        }
+    </style>
+</head>
+<body>
+    <h1>Você já pode votar?</h1>
+    Quantos anos você tem? <input type="number" name="txtidade" id="txtidade">
+    <input type="button" value="Enviar" onclick="votar()">
+    <div id="resultado"></div>
+
+    <script>
+        function votar(){
+            var txtnumero = document.querySelector('input#txtidade')
+            var resultado = document.querySelector('div#resultado')
+            var idade = Number(txtnumero.value)
+            resultado.innerHTML = `<p>A sua idade é <strong>${idade}</strong> anos de idade!`
+                if(idade >= 16){
+                    resultado.innerHTML += `<p>Você já pode votar!</p>`
+                    resultado.innerHTML += `<p class="verde">você vai querer ser responsável pelo <strong class="amarelo">FUTURO</strong> do seu País?</p>`
+                } else {
+                    resultado.innerHTML += `<p>Você ainda não pode votar!</p>`
+                    resultado.innerHTML += `<p><strong class="amarelo">MAS NÃO SE ESQUEÇA:</strong><em>Você também pode fazer a sua parte, para que seu País seja um lugar melhor!</em></p>`
+                    resultado.innerHTML += `<p><strong class="verde">Se cada um ajudar, nós poderemos ter uma vida MELHOR!!!</strong></p>`
+                    resultado.innerHTML += `<p><strong><em class="azul">FAÇA A SUA PARTE!</em></strong></p>`
+                }
+            
+        }
+    </script>
+</body>
+</html>
+
+		
 --------------------------------------------------------------------				
 
 		-------------------------------
@@ -1815,7 +2000,7 @@ outro ex:
 		
 		${Condições no JS - Parte 2}
 		
-				***Condições aninhadas***
+				***Condição aninhada***
 				
 				=> Pegamos uma condição composta e colocamos outras condições dentro dela. (Aninhada, vem de Ninho)
 		
@@ -1832,6 +2017,129 @@ outro ex:
 
 
 Então, se a condição 1 for verdadeira, o código executa a linha e finaliza, caso contrário ela entre na condição 2, ela irá verificar as possibilidades.
+
+
+				***Condição Multipla***
+				
+					Ela funciona be caso eu precise trabalhar com valores fixos (ela não funciona muito be pra intervalos de valores como nós vimos na condição aninhada). Ela tem a posibilidade não só do sim e não, mas de outros valores. Como já disse, de valores fixos.
+
+					
+					switch(expressão){
+						case valor 1:
+							***
+							break
+							
+						case valor 2:
+							***
+							break
+							
+						case valor 3:
+							***
+							break
+							
+						default:
+							***
+							break
+					}
+						
+
+break = NUNCA ESQUECER DE COLOCAR, POIS SENÃO O CÓDIGO TERÁ UM PROBLEMA. PODERÁ ENTRAR EM LOOPING, CONTINUARÁ EXECUTANDO ATÉ ENCONTRAR UM BREAK NO CAMINHO.
+
+	=> A estrutura switch/case é bem simples: o comput testará o que estiver dentro dos parenteses do do switch. Caso o teste seja compatível com o valor 2, por exemplo, o bloco daquele caso será executado; encontrará o break e em seguida continuará a executar o código partir do do fechamento de chaves do switch. 
+
+
+*********JS*********
+
+=>>>>>
+
+/* ...AINDA SERIA A CODIÇÃO COMPOSTA 
+
+var idade = 26
+if(idade < 18){
+    console.log('Você é menor de idade!')
+} else {
+    console.log('Você já atingiu a maioridade!')
+}*/
+
+var idade = 68
+console.log(`Você tem ${idade} anos de idade!`)
+
+if(idade < 16){
+    console.log('Você não pode votar!')
+} else if (idade < 18 || idade > 65){
+    console.log('Seu voto é opcional!')
+} else {
+    console.log('Você precisa votar, pois pra você o voto é obrigatório no Brasil!')
+}
+
+
+=>>>>>
+
+var Agora = new Date()
+var hora = Agora.getHours() // Assim colocamos exatamente a hora do sistema do comput.
+
+console.log(`Agora são exatamente ${hora} horas!`)
+
+if(hora >= 6 && hora < 12){
+    console.log('Olá, bom dia!')
+} else if (hora >= 12 && hora < 18) {
+    console.log('Boa tarde, você já almoçou?')
+} else if (hora >= 18 &&  hora <=24 ){
+    console.log('Boa noite! você está cansado? Trabalhou muito?')
+} else{
+    console.log('É madrugada, você não deveria estar dormindo?')
+}
+
+
+=>>>>>
+
+var agora = new Date
+var diaSem = agora.getDay()
+
+/* 
+    0 = Domingo
+    1 = Segunda
+    2 = Terça
+    3 = Quarta
+    4 = Quinta
+    5 = Sexta
+    6 = Sábado
+*/
+
+console.log(diaSem)
+
+switch(diaSem){
+    case 0:
+        console.log('Hoje é Domingo!')
+        break
+    case 1:
+        console.log('Hoje é Segunda!')
+        break
+    case 2:
+        console.log('Hoje é Terça!')
+        break
+    case 3:
+        console.log('Hoje é Quarta!')
+        break
+    case 4:
+        console.log('Hoje é Quinta!')
+        break
+    case 5:
+        console.log('Hoje é Sexta!')
+        break
+    case 6:
+        console.log('Hoje é Sábado!')
+        break
+    default:
+        console.log('[ERRO] Dia da semana inválido!')
+        break
+}
+
+
+---------------------------------------------------------------------
+
+
+
 
 
 
