@@ -1464,22 +1464,385 @@ Preparando o ambiente de desenvolvimento, com:
 				
 				Conjunto de linhas de código que serão executadas só quando o evento ocorrer. eX: digitaremos 10 linhas de código.
 				
+				
+				
 O bloco será nomeado com uma FUNCTION ação (parâmetros) { <= geralmente a nomeação da função é com uma ação que ela poderá executar.
-						  |		ELAS SERÃO COLOCADAS DENTRO DE UM BLOCO, com abre e fecha chaves
+			     ----------------------------    ELAS SERÃO COLOCADAS DENTRO DE UM BLOCO, com abre e fecha chaves
 						  |	  }
+						  |
                              -------------------------							  
 				podemos ainda colocar 
 				alguns parâmetros para 
 				a função.
 			     ---------------------------
+			     
+			     Então, ficaria: 
+			     
+				     function ação (param){
+				     	linhas de código
+				     }
+
+		
+		Então:
+		------
+			
+			1 - Precisamos desixar tudo em bloco entre os sinais de chaves. => {}
+			
+			2 - Precisamos nomear um bloco com uma "function" = função. (No JS existem blocos de funcção anônima sem nome para a função, mas geralmente precisamos dar a elas nomes, quase sempre com as ações que elas deverão executar.) => function {}
+			
+			3 - Nomear a function com uma ação => 
+				
+				function ação(){
+					>BLOCO DE CÓDIGO<
+				}
+				
+			4 - Opcionalmente podemos colocar parâmetros dentro desses parentêses. (1 ou mais deles)
+			
+			
+			
+			
+			
+			
+			
+****************Inserido no HTML***************
+
+			
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15pt arial ;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> /* NO HTML, FALAMOS A FUNÇÃO NA TAG QUE QUEREMOS E EM 												SEGUINDA O QUE ELA IRÁ FAZER (A NOMEAMOS). DEPOIS, NA TAG 												SCRIPT ABRIMOS UM BLOCO ENTRE {} (COMO VIMOS NA EXPLICAÇÃO 												ACIMA) COM UMA FUNCTION + O NOME DA AÇÃO ATRIBUIDO NA TAG 												PARA REFERENCIÁ-LA E SABER ONDE ELA ESTÁ INTERAGINO (COMO 												NOMEAMOS ELA NESSA TAG, ENTÃO FICARIA 
+    											function clicar(){bloco de código}). ENTÃO ASSIM NOS 											CONFIGURAMOS (DISPARAMOS O MÉTODO) - ESSE MÉTODO SÓ IRA 												CHAMAR (IRÁ DISPARAR) QUANDO EU CHAMR O MÉTODO, OU SEJA 												(NESSE CASO), QUANDO EU "CLICAR". E DENTRO DO BLOCO, 											CONFIGURAMOS O QUE IRÁ ACONTECER QUANDO EU CLICAR.
+    											PARA FAZER A CONFIG DO BLOCO EU PRECISO VER A MINHA ÁRVORE 												DOM (NESSE CASO, É UMA div DE id area)*/
+        
+        Interaja...
+    </div>
+
+    <!-- Os eventos DOM podem ser escritos tanto no html como JS -->
+    <!-- Nesse formato, estamos aplicando no html -->
+
+    <script>
+        var area = window.document.getElementById('area') // Não é o melhor jeito pois teriamos um problema com a memória aqui, mas assim a var 									atenderia a todas as functions.
+        
+        // Guanabara colocou var a, mas ele disse que poderíamos colocar var area sem problemas.
+
+        /*
+                ALERTAAAAAA
+
+                    o JS não apreseta erros. O que fazer nesse caso, se você possivelmente esqueceu uma letra ou não fechou um parenteses?????
+                    > Entre no Browser > clique com o botão direito e selecione inspecionar > lá no console te apresentará o erro!!!!! UFFA...
+                    (Ele te apresentará em que linha está o erro e provelmente o erro estrá naquela linha pra cima, no código.)
+        */
+
+        function clicar(){
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+        function entrar(){
+            area.innerText = 'Entrou!'
+        }
+        function sair() {
+            area.innerText = 'Saiu!'
+            area.style.background = 'green'
+        }
+    </script>
+
+</body>
+</html>
 
 
 
 
-Módulo D: Condições em JavaScript
-5 Aulas
+****************Inserido no JS***************
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15pt arial ;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <!-- Os eventos DOM podem ser escritos tanto no html como JS -->
+    <!-- Nesse formato, estamos aplicando no JS -->
+
+    <script>
+        var area = window.document.getElementById('area') /* LEMBRANDO QUE ESTAMOS USANDO A ARVORE DOM. ASSIM ENTEDEMOS QUE getElementById* ESTÁ 									DENTRO DE document (OU É FILHA DE document) QUE ESTÁ DENTRO DE window**. 
+        
+        							* getElementById está no singular e por isso não precisamos usar colchtes!
+        							** Não precisamos usar window sempre. O código pode começar por  									document.getElementById('area') sem problemas, mas como estamos aprendendo, 									colocamos para podermos ver a árvore inteira. */
+        							
+        // Guanabara colocou var a, mas ele disse que poderíamos colocar var area sem problemas.
+        
+        area.addEventListener('click', clicar) 	// *OUVIDORES* VAI PRESTAR ATENÇÃO EM CADA EVENTO. O HTML FICA LIMPO E O DOM TODO NO JS. É 								QUASE A MESMA COISA DO FUNCTION: FALAMOS A FUNÇÃO QUE ELE VAI FAZER E DEPOIS O NOMEAMOS. 								NA FUNCTION NO JS, O REFERENCIAMOS COM O NOME QUE JÁ FOI DADO PARA DISPARARMOS AS CONFIGS 								QUE COLOCAMOS NO BLOCO. E AI, FICA A ENCARGO DO JS FAZER A LIGAÇÃO DO HTML COM JS ATRAVÉS 								DESSAS 3 LINHAS QUE COLOCAMOS OS OUVIDORES (addEventListener).
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+        function entrar(){
+            area.innerText = 'Entrou!'
+        }
+        function sair() {
+            area.innerText = 'Saiu!'
+            area.style.background = 'green'
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+outro ex:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+            background: rgb(139, 139, 185);
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+            color: white;
+            border: solid 2px #000000;
+            box-shadow: 1px 1px 4px rgba(0,0,0, .3);
+            padding-left: 5px;
+            width: 340px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Números</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 	<!--Não preciso nem abrir a tag. Nessa ide, se eu digitar 'input', ela já abre pra mim a 								tag com tudo o que a tag input já deve ter: type, name e id-->
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res"><strong>Resultado</strong></div>
+    <script>
+        function somar() {
+            var txtn1 = window.document.getElementById('txtn1')
+            var txtn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var s = n1 + n2
+            res.innerHTML = `<em>A soma de ${n1} + ${n2} é igual a <strong>${s}</strong></em>!` // STRING INTERPOLADA QUANDO ESTÃO DENTRO DE 														CRASES.
+        }
+    </script>
+</body>
+</html>
+
+			
+
+
+---------------------------------------------------------------------
+
+
+****************************************		
+   => Módulo D: Condições em JavaScript
+****************************************
+
+
+	>> 5 Aulas <<
+
+		- Aula 11 – Condições (Parte 1)
+		- Aula 12 – Condições (Parte 2)
+		- Exercícios JavaScript (Parte 1)
+		- Exercícios JavaScript (Parte 2)
+		- Exercícios JavaScript (Parte 3)
+		
+		
+				=> Condições simples (if)
+				=> Condições compostas (if/else)
+				=> Condições aninhadas (encadiando multiplas funções - elseif)
+				=> Condições multiplas (switch/case)
+				=> Exercícios propostos
+		
+
+
+		-------------------------------
+		 Aula 11 - Condições (Parte 1)
+		-------------------------------
+
+
+(Você sabe usar o comando if no JavaScript? Sabe diferenciar condições simples e condições compostas? Sabe como criar uma condição usando JavaScript? Sabe como instalar e configurar a extensão Node Exec no Visual Studio Code?)
+
+
+> Guanabara ask...
+------------------
+
+		1 - Consegue citar 3 eventos que podem acontecer com elementos DOM de um site?
+		
+			Podemos usar os exemplos da aula, que foram eventos com o mouse para clicar, para sair do perimetro demarcado com a tag <div> e quando entrava no perimetro. (click, onmouseenter e onmouseout)	
+		
+		
+		
+		2 - O que é uma função? Como criar funções em JS?
+		
+				(Definição do MDN: "Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.")
+				
+				=> Função é como fazemos a interação com os elementos da página e o usuário. Ele sempre estará assim:
+				function ação(pode haver parâmetros){
+					Bloco de código com a config deo que ele irá fazer.
+				}
+		
+		
+		
+		3 - Sabe como pegar os valores de caixa de texto e fazer cálculos com eles?
+		
+				Sim, assim que o colhermos do usuário, o transformamos em números, pois dependendo de onde rebemos os dados eles serão strings. Após convertidos para números e resolvermos a operação, solicitamos que o código exiba o resultado na tela. 
+		
+
+
+
+		${CONDIÇÕES NO JS}
+		
+		Nas linguagens imperativas, ditas populares, os códigos podem parar de executar um linha sequencial, e podem ter um desvio condicional. Ou seja, elas podem ter uma bifurcação, que seria: Caso aconteça uma coisa, acontecerá x - caso contrário, y. Que seria o if (se) ou else (senão)
+
+		=> if(condição)
+			{ crio um bloco
+				caso true, se a condição for verdadeira     
+			} else {
+				caso false crio outro bloco
+			}
+
+
+		então ficaria: 
+		
+				if(condition){
+					true;
+				} else {
+					false;
+				}
+				
+				
+				*** TIPOS DE CONDIÇÃO ***
+				
+				
+					>> CONDIÇÃO SIMPLES
+					
+						if(condition){
+							true;
+						} 
+						
+					Nessa, se o valor for false nada irá acontecer.
+					>> CONDIÇÃO COMPOSTA
+					
+					Já nessa, o comput terá duas possibilidades de execução: true e false.
+				
+						
+							if(condition){
+								true;
+							} else {
+								false;
+							}
+						
+				
+				
+				{Indentação = recuo - em inglês: indent (É o que fazemos para deixarmos o código organizado)}
+				
+				
+--------------------------------------------------------------------				
+
+		-------------------------------
+		 Aula 11 - Condições (Parte 2)
+		-------------------------------
+		
+(Você sabe mudar a cor de fundo de um site, dinamicamente, usando JavaScript? Sabe como inserir uma imagem usando JavaScript em um site, sem ter a tag img previamente definida? Sabe como utilizar condições simples (if), condições compostas (if..else), condições aninhadas (if..elseif..else) e condições múltiplas (switch..case) em JavaScript?)
+
+
+> Guanabara ask...
+------------------
+
+		1 - Voceê sabe coo utilizar a extensão Node Exec no VS Code?
+		
+			Sim, depois de habilitada na IDE, usamos a Função F8 do teclado para acioná-la.
+			
+			
+			
+		2 - Sabe criar uma condição em JS?
+		
+			Sim, duas: Simples e composta utilizando o if para condição simples e if/else para condição composta.
+			
+			
+			
+		3 - Você sabe diferenciar condições simples e condições compostas no seu código?
+		
+			Sim, como na resposta acima, só "if" seria para uma condição simples, ou seja, caso algo aconteça, uma ação será tomada, caso contrário, nada irá acontecer. Já na composta, há duas possibilidades de acontecimentos. Ou uma, ou outra. 
+		
+		
+		${Condições no JS - Parte 2}
+		
+				***Condições aninhadas***
+				
+				=> Pegamos uma condição composta e colocamos outras condições dentro dela. (Aninhada, vem de Ninho)
+		
+			
+						if(condition1){
+								bloco1 - true;
+							} else {
+								if(condition2){
+									bloco2 - true;
+								} else {
+									bloco3 - false;
+								}
+							}
+
+
+Então, se a condição 1 for verdadeira, o código executa a linha e finaliza, caso contrário ela entre na condição 2, ela irá verificar as possibilidades.
+
+
+
+
+
 Módulo E: Repetições em JavaScript
 5 Aulas
 Módulo F: Avançando os estudos em JavaScript
 5 Aulas
 Teste JavaScript
+
+
+
+

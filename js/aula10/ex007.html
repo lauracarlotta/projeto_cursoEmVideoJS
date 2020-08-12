@@ -26,7 +26,7 @@
 </head>
 <body>
     <h1>Somando Números</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn1" id="txtn1"> + <!--Não preciso nem abrir a tag. Nessa ide, se eu digitar 'input', ela já abre pra mim a tag com tudo o que ela deve ter: type, name e id-->
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="somar" onclick="somar()">
     <div id="res"><strong>Resultado</strong></div>
@@ -38,7 +38,7 @@
             var n1 = Number(txtn1.value)
             var n2 = Number(txtn2.value)
             var s = n1 + n2
-            res.innerHTML = `<em>A soma de ${n1} + ${n2} é igual a <strong>${s}</strong></em>!`
+            res.innerHTML = `<em>A soma de ${n1} + ${n2} é igual a <strong>${s}</strong></em>!` // String interpolada.
         }
     </script>
 </body>

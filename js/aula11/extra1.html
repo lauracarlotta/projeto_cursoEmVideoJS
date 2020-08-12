@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Extra 1: Qual a sua nacionalidade?</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Em que país você nasceu? Me conta ai!</h1>
+    <input type="text" name="nacionalidade" id="nacionalidade">
+    <input type="button" value="Quero saber!" onclick="responder()">
+    <div id="resultado"></div>
+
+    <script>
+        function responder(){
+            var nasc = document.querySelector('input#nacionalidade')
+            var resultado = document.querySelector('div#resultado')
+            var nasceu = String(nasc.value)
+            resultado.innerHTML = `Você nasceu no (a, os, as, em) ${nasceu}!`
+            if(nasceu == 'Brasil' || nasceu == 'brasil'){
+                resultado.innerHTML += `<p> Que pena amigo... <strong>Estamos no mesmo barco</strong> kkkkkkk</p>`
+                resultado.innerHTML += `<p> Mas vamos chegar lá de qualquer jeito, não é?!`
+            } else {
+                resultado.innerHTML += `<p>Você é Estrangeiro!</p>`
+                resultado.innerHTML += `<p><strong>Alguém me explica o que é que você ta fazendo aqui???????</strong></p>`
+            }
+            
+
+        }
+    </script>
+</body>
+</html>

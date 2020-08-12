@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Extra 2: Você já pode votar? </title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+
+        body{
+            font-size: 18pt;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        #txtidade{
+            width: 80px;
+        }
+
+        .amarelo{
+            color: rgb(217, 221, 0);
+        }
+
+        .verde{
+            color: rgb(47, 128, 0);
+        }
+
+        .azul{
+            color: rgb(10, 10, 117);
+        }
+    </style>
+</head>
+<body>
+    <h1>Você já pode votar?</h1>
+    Quantos anos você tem? <input type="number" name="txtidade" id="txtidade">
+    <input type="button" value="Enviar" onclick="votar()">
+    <div id="resultado"></div>
+
+    <script>
+        function votar(){
+            var txtnumero = document.querySelector('input#txtidade')
+            var resultado = document.querySelector('div#resultado')
+            var idade = Number(txtnumero.value)
+            resultado.innerHTML = `<p>A sua idade é <strong>${idade}</strong> anos de idade!`
+                if(idade >= 16){
+                    resultado.innerHTML += `<p>Você já pode votar!</p>`
+                    resultado.innerHTML += `<p class="verde">você vai querer ser responsável pelo <strong class="amarelo">FUTURO</strong> do seu País?</p>`
+                } else {
+                    resultado.innerHTML += `<p>Você ainda não pode votar!</p>`
+                    resultado.innerHTML += `<p><strong class="amarelo">MAS NÃO SE ESQUEÇA:</strong><em>Você também pode fazer a sua parte, para que seu País seja um lugar melhor!</em></p>`
+                    resultado.innerHTML += `<p><strong class="verde">Se cada um ajudar, nós poderemos ter uma vida MELHOR!!!</strong></p>`
+                    resultado.innerHTML += `<p><strong><em class="azul">FAÇA A SUA PARTE!</em></strong></p>`
+                }
+            
+        }
+    </script>
+</body>
+</html>
