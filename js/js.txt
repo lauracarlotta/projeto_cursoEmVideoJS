@@ -2249,24 +2249,586 @@ alert('Olá, mundo!')
 		
 		
 		
+
+=>> HTML
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()"> <!--onload = quer dizer 'Quando eu carregar', eu convoco a ação carregar() -->
+    
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+    <section>
+        <div id="msg">
+            Aqui vai aparecer uma msg...            
+        </div>
+
+        <div>
+
+        </div>
+
+        <div id="foto">
+            <img id="imagem" src="manha.png" alt="Foto do Dia"/> <!--alt = texto alternativo-->
+        </div>
+    </section>
+
+    <footer>
+        <p id="footer">&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+=>> CSS
+
+body{
+    background: rgb(137, 137, 235);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
+
+div{
+    text-align: center;
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+
+=>> Js		
 		
 		
+function carregar(){
+    var msg = document.getElementById('msg')
+    var img = document.getElementById('imagem')
+    var cabecalho = document.getElementById('cabecalho')
+    var rodape = document.getElementById('rodape')
+    var data = new Date()
+    //var hora = data.getHours()
+    var hora = 18
+    msg.innerHTML = `Agora são ${hora} horas!`
+
+        if(hora >= 6 && hora < 12){
+            //Bom dia
+            img.src = 'manha.png'
+            msg.innerHTML += '<p>Bom dia! Pronta pra começar?</p>'
+            document.body.style.background = '#bac5cb'
+            cabecalho.style.color = '#04330e'
+            rodape.style.color = '#04330e'
+        } else if (hora >= 12 && hora < 18){
+            // Boa tarde
+            img.src = 'tarde.png'
+            msg.innerHTML += '<p>Boa tarde! Você já almoçou?</p>'
+            document.body.style.background = '#f69f2c'
+            cabecalho.style.color = '#421400'
+            rodape.style.color = '#421400'
+        } else if (hora >=18 && hora <= 23) {
+            // Boa noite
+            img.src = 'noite.png'
+            msg.innerHTML += '<p>Tenha uma ótima noite e bom descanso!</p>'
+            document.body.style.background = '#0e3359'
+            cabecalho.style.color = '#d49457'
+            rodape.style.color = '#d49457'
+        } else {
+            // Madrugada
+            img.src = 'madrugada.png'
+            msg.innerHTML += '<p>Já é tarde! Você não deveria estar dormindo e tendo bons sonhos?</p>'
+            document.body.style.backgroundImage = 'url("sonhos1.jpg")'
+            cabecalho.style.color = '#053e4f'
+            rodape.style.color = '#053e4f'
+        }
+}		
 		
 		
+	
 		
 		
+---------------------------------------------------------------------
+
+		---------------------------------
+		 Exercícios JavaScript (Parte 3)
+		---------------------------------
+		
+(Vamos fazer alguns exercícios de JavaScript? Chegou a hora de provar a si mesmo que todo o seu esforço está valendo a pena até aqui. Quando aprendemos e praticamos, solicitamos os nossos conhecimentos adquiridos. Então vamos lá! Não pule esse vídeo e faça todas as atividades propostas em JavaScript.)
+
+
+
+> Guanabara ask...
+------------------
+	<No questions>		
 		
 		
+		Botando a mão na massaaaaaaaaa!!!!
 		
-		- Exercícios JavaScript (Parte 3)
+		
+=>> HTML
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifícador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p class="centro">Ano de nascimento: &nbsp;
+                <input type="number" name="txtano" id="txtano" min="0" max="100">
+            </p>
+            <p class="centro">Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label> &nbsp; 
+                <input type="button" value="Verificar" onclick="verificar()"> 
+            </p>
+        </div>
+
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+=>> CSS
+
+
+body{
+    background: rgb(137, 137, 235);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+
+.centro{
+    text-align: center;
+}
+
+#res {
+    text-align: center;
+}
+
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
 
 
 
 
 
+=>> JS	
+		
+		
+function verificar(){
+    var data = new Date()
+    var ano = data.getFullYear()
+    var fano = document.getElementById('txtano')
+    var res = document.querySelector('div#res')
+    if (fano.value.length == 0 || Number(fano.value) > ano) { // Number nesse caso é só para deixar mais explicito, pois sem o 'Number', funciona também!
+        alert('[ERRO] Verifique os dados informados e tente novamente!')
+    } else {
+        var fsex = document.getElementsByName('radsex')
+        var idade = ano - Number(fano.value)
+        var genero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+        if (fsex[0].checked){
+            genero = 'Masculino'
+            if (idade >= 0 && idade < 4){
+                // Criança de até 3 anos
+                img.setAttribute ('src', 'm1.png')
+            } else if (idade < 7){
+                // Criança de ate 6 anos
+                img.setAttribute ('src', 'm5.png')
+            } else if (idade < 13){
+                // Criança/Adolescente de até 12 anos
+                img.setAttribute ('src', 'm10.png')
+            } else if (idade < 17){
+                // Adolescente de até 16 anos
+                img.setAttribute ('src', 'm15.png')
+            } else if (idade <= 25){
+                // Adulto de até 25 anos
+                img.setAttribute ('src', 'm25.png')
+            } else if (idade <= 35){
+                // Adulto de até 35 anos
+                img.setAttribute ('src', 'm35.png')
+            } else if (idade <= 45){
+                // Adulto de até 45 anos
+                img.setAttribute ('src', 'm45.png')
+            } else if (idade <= 55){
+                // Adulto de até 55 anos
+                img.setAttribute ('src', 'm55.png')
+            } else if (idade <= 65){
+                // Idoso de até 65 anos
+                img.setAttribute ('src', 'm65.png')
+            } else if (idade <= 75){
+                // Idoso de até 75 anos
+                img.setAttribute ('src', 'm75.png')
+            } else if (idade <= 85){
+                // Idoso de até 85 anos
+                img.setAttribute ('src', 'm85.png')
+            } else {
+                // Idoso de até 86 anos pra cima.
+                img.setAttribute ('src', 'm95.png')
+            }
+        } else if (fsex[1].checked){
+            genero = 'Feminino'
+            if (idade >= 0 && idade < 4){
+                // Criança de até 3 anos
+                img.setAttribute ('src', 'f1.png')
+            } else if (idade < 7){
+                // Criança de ate 6 anos
+                img.setAttribute ('src', 'f5.png')
+            } else if (idade < 13){
+                // Criança/Adolescente de até 12 anos
+                img.setAttribute ('src', 'f10.png')
+            } else if (idade < 17){
+                // Adolescente de até 16 anos
+                img.setAttribute ('src', 'f15.png')
+            } else if (idade <= 25){
+                // Adulto de até 25 anos
+                img.setAttribute ('src', 'f25.png')
+            } else if (idade <= 35){
+                // Adulto de até 35 anos
+                img.setAttribute ('src', 'f35.png')
+            } else if (idade <= 45){
+                // Adulto de até 45 anos
+                img.setAttribute ('src', 'f45.png')
+            } else if (idade <= 55){
+                // Adulto de até 55 anos
+                img.setAttribute ('src', 'f55.png')
+            } else if (idade <= 65){
+                // Idoso de até 65 anos
+                img.setAttribute ('src', 'f65.png')
+            } else if (idade <= 75){
+                // Idoso de até 75 anos
+                img.setAttribute ('src', 'f75.png')
+            } else if (idade <= 85){
+                // Idoso de até 85 anos
+                img.setAttribute ('src', 'f85.png')
+            } else {
+                // Idoso de até 86 anos pra cima.
+                img.setAttribute ('src', 'f95.png')
+            }
+        }
+        res.style.textAlign = 'center'
+        res.innerHTML = `<p>Detectamos uma pessoa do gênero ${genero} </br> com ${idade} anos! </p>`
+        res.appendChild(img)
+    }
+}
 
-Módulo E: Repetições em JavaScript
-5 Aulas
+
+
+
+---------------------------------------------------------------------
+
+
+*****************************************		
+   => Módulo E: Repetições em JavaScript
+*****************************************
+
+
+	>> 5 Aulas <<
+
+		- Aula 13 – Repetições (Parte 1)
+		- Aula 14 – Repetições (Parte 2)
+		- Exercícios JavaScript (Parte 4)
+		- Exercícios JavaScript (Parte 5)
+		- Exercícios JavaScript (Parte 6)
+		
+		
+				=> Repetições em JS
+				-------------------
+				
+					= Repetições com teste no início (while)
+					= Repetições com teste no final (do/while)
+					= Repetições com variável de controle (for)
+					** Exercícios Propostos **
+
+
+
+
+		--------------------------------
+		 Aula 13 - Repetições (Parte 1)
+		--------------------------------
+		
+		
+(Você sabe como utilizar as estruturas while e do..while em JavaScript? Sabe como realizar repetições ou laços em JavaScript? Sabe como fazer um mesmo código ser executado várias vezes em um mesmo programa?)
+
+
+> Guanabara ask...
+------------------
+
+		1 - Sabe mudar a cor de fundo DINÂMICAMENTE, usando JS?
+		
+			Sim, tanto conforme solicitação por um formulário, como usando o horário do computador para isso.
+			
+			
+		2 - Consegue inserir uma imagem dentro do seu site sem ter a tag <img> previanete criada?
+		
+			Sim, utilizando o mecanismo de "soma" quando solicito um resultado por meio do n.appendChild(img)
+		
+		
+		3 - Já treinos bastante o uso de condições simples, compostas, aninhadas e múltiplas? 
+		
+			Sim, além dos exercícios que o Guanabara propôs, fiz alguns que eu criei e foi tranquilo.
+			
+			
+			
+			 
+			  ${Repetições e JS}
+			 (Laços ou Iterações)
+			 
+			 
+	Ex: COMER UMA PIZZA:
+			 
+			 function comerPizza() {
+			 	comerFatia ()
+			 	comerFatia ()
+			 	comerFatia ()
+			 	comerFatia ()
+			 	comerFatia ()
+			 	comerFatia ()
+			 	comerFatia ()
+			 	comerFatia ()
+			 }
+			 
+			 		=> Até a pizza acabar.
+
+
+		- Estruturas de controle: Vou do ponto A até o ponto B executando as tarefas uma em seguinda da outra de forma contínua, sequencialmente (em linha reta.) 
+		
+	Agora com a estrutura de repetição {enquanto}, usamos o laço, ou repetição que, com o exemplo da pizza, eu saio do ponto A (Compro a pizza) e vou até o ponto B (ir dormir) da seguinte forma: ENQUANTO houver pedaços, ou seja, for verdadeira, eu sigo a ordem - corto a pizza, coloco no prato, como a fatia - quando não não houver mais pedaços, eu sigo para o ponto B que é coloco meu prato na pia, escovo os dentes e vou dormir.
+	
+	
+			
+	       ---> while (condição) {  ----------------
+	       |					 |
+	       |	Bloco de código a ser		 |
+	       |		repetido quando	 |
+	       |		verdadeiro		 |
+	       ---- } 					 |
+							 |
+							 |
+		     <----------------------------------    <<<= Vai para fora do laço quando for falso
+		     						   quando não precisar mais ser repetido.
+		     						   
+		     						   
+		     					
+		     					
+		   	function comerPizza() {
+		   	|	
+		   	|	while(temFatia()) {
+		   	|	|	
+		   	|	|	comerFatia()
+		   	|	}
+		   	}
+		   	
+		   	
+		   	
+	A estrutura acima serve para condições que são testadas no início. Porém temos as que são testadas no final!
+	
+	
+		     				
+		Que seria:
+		
+			function comerPizza() {
+			|	
+			|	do {
+			|	|
+			|	|	BLOCO DE REPETIÇÃO
+			|	|
+			|	} while (condição)
+			}		   
+		     						   
+		     						   
+
+==>> JS
+
+
+/* Teste de repetição no Início (com while)
+
+    var c = 1
+    while (c <= 6) {
+    console.log(`Passo ${c}`)
+    c++ // c = c + 1          
+}                            */
+
+
+// Teste de repetição no Final (com do/while) 
+
+var c = 1
+do {
+console.log(`Passo ${c}`)
+c++
+} while (c <= 6)
+
+
+/*  
+	A PIOR FORMA DE TODAS KKKKKKK
+	
+    console.log('Tudo bem?')
+    console.log('Tudo bem?')
+    console.log('Tudo bem?')
+    console.log('Tudo bem?') 
+    console.log('Tudo bem?')
+    console.log('Tudo bem?') */				   
+		     						   
+		     						   
+
+
+
+---------------------------------------------------------------------
+
+		--------------------------------
+		 Aula 14 - Repetições (Parte 2)
+		--------------------------------
+	     						   
+(Você sabe utilizar a estrutura for para realizar repetições em JavaScript? Sabe como utilizar repetições com variáveis de controle em JavaScript? Sabe a diferença existente entre while, do..while e for?)
+
+
+
+> Guanabara ask...
+------------------
+
+		1 - O que eu faço se quiser fazer uma determinada atividade acontcer várias vezes?
+		
+			Ao invés de copiar e colar o codigo várias vezes, eu utilizo uma estrutura de repetição ou laço.
+			
+			 
+		2 - Sabe diferenciar as estruturas de condição e as estruturas de repetição?
+		
+			Sim, as estruturas de condições são para quando eu tenho duas ou mais opções e verifico de n coisa é verdadeira ou falsa. Já a estrutura de repetição eu utilizo para quando eu quiser que uma n coisa seja executada várias vezes.
+			
+			while é uma estrutura de repetição. exemplo: Enquanto for verdade, continue fazendo
+
+if é uma estrutura de condição . Exemplo: Se for verdade faça e pronto
+
+
+		3 - Consegue dizer a diferença entre as estruturas while e a do..while?
+		
+			Sim, while serve para o teste de repetição no início e do..while serve para teste de repetição no fim do bloco de código.						   
+		     						   	
+			  ${Repetições e JS}
+			 (Laços ou Iterações)
+			 
+			 
+			 Estrutura de repetição com variável de controle => FOR
+			 ------------------------------------------------ 
+			 
+			 
+				 - Inicialização;
+				 - Teste lógico;
+				 - Incremento.
+				 
+			 
+	Ponto A -> Iinicialização/teste lógico ->
+			
+					incremento (repetição enquanto verdade) -> Ponto B.
+					
+					
+					
+					for (inicio; teste; incr) {
+						
+					}
+					
+					
+			eXEMPLOS: (AULA PASSADA COM TESTE NO INICIO, PODEMOS APLICAR PARA A VARIÁVEL DE CONTROLE.)
+			
+				// TESTE NO INÍCIO
+				
+				var c = 1
+				while (c <= 10) {
+					
+					Bloco código
+					c++
+				}
+				
+					----
+				
+				// VARIÁVEL DE CONTROLE
+				
+				for (var c = 1; c <= 10; c++) {
+					
+					Bloco código
+				}
+				
+				
+				
+				
+				
+								
+
+---------------------------------------------------------------------
+
+		- Exercícios JavaScript (Parte 4)
+		- Exercícios JavaScript (Parte 5)
+		- Exercícios JavaScript (Parte 6)
+
+
+
+
 Módulo F: Avançando os estudos em JavaScript
 5 Aulas
 Teste JavaScript
