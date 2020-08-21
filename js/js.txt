@@ -2814,16 +2814,203 @@ if é uma estrutura de condição . Exemplo: Se for verdade faça e pronto
 					Bloco código
 				}
 				
+	Entendemos como debugar o código. (Nessa aula na verdade, vimos como ver o código funcionando linha por linha, ação por ação. Em estruturas de repetição isso é muito valioso, pois podemos ver como está sendo a resposta do blocos de código.)			
 				
-				
-				
-				
-								
+							
+
+==>>> JS
+
+
+/* var c = 1
+while (c <= 5) {
+    console.log (`Linha ${c}`)
+    c += 2
+}*/
+
+//-------------------------------------
+
+// MODO DEPURADOR - VS CODE
+
+console.log ('Vai começar em ...')
+for (var c = 5; c > 0; c--){
+    console.log (`...${c}`)
+}
+console.log ('Go, go, go!')							
 
 ---------------------------------------------------------------------
 
-		- Exercícios JavaScript (Parte 4)
-		- Exercícios JavaScript (Parte 5)
+
+		---------------------------------
+		 Exercícios JavaScript (Parte 4)
+		---------------------------------
+	     						   
+(Vamos fazer alguns exercícios de JavaScript? Chegou a hora de provar a si mesmo que todo o seu esforço está valendo a pena até aqui. Quando aprendemos e praticamos, solicitamos os nossos conhecimentos adquiridos. Então vamos lá! Não pule esse vídeo e faça todas as atividades propostas em JavaScript.)
+
+
+
+> Guanabara ask...
+------------------
+
+		1 - Já aprendeu a usar direito a extensão do Watch in Chrome no VS Code?
+		
+			Não, pois não está mais funcionando. Estou usando o Live Server que dá pra todos os navegadores que você usar como padrão do pc.
+			
+			
+			
+		2 - Já aprendeu a usar  o MODO DEPURAÇÃO do VS code?
+		
+			Sim, é simples: Você pode ir em Run > Start Debugging ou apertar a tecla F5 (marcamos a opção pra ser reproduzida no node.js) > No código você marca com a bolinha vemelha (entre o numero da linha de código e o próprio código) depois, do lado esquerdo, em "watch" acrescentamos qual variável queremos monitorar. Assim a cada linha apertamos F10 para ver sendo reproduzido linha por linha. Essa representação é mostrada no terminal, na aba debug console.
+			
+			
+		3 - Já fez todos os teste com as estruturas while, do/while e for?
+		
+			Sim, e a princípio foi tranquilo pois já havia visto essa mesma matéria na faculdade, porém foi bem ais esclarecedora.
+			
+		
+		
+		${HORA DE PRATICAR}
+		
+		
+	Minhas tentativas ex016
+	
+	
+
+=> HTML
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos contar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Início:
+                <input type="number" name="txtinicio" id="txtinicio">
+            </p>
+            <p>Fim:
+                <input type="number" name="txtfim" id="txtfim">
+            </p>
+            <p>Passo:
+                <input type="number" name="txtpasso" id="txtpasso">
+            </p>
+            <input type="button" value="Contar" onclick="contar()"> 
+        </div>
+
+        <div id="contando">
+            <p>Preparando contagem... </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+=>CSS
+
+body{
+    background-image: url(img/tempo.jpg);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
+
+div{
+    margin-top: 10px;
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+
+
+=> JS
+
+function contar(){
+    var inicio = document.getElementById('txtinicio')
+    var fim = document.getElementById('txtfim')
+    var passo = document.getElementById('txtpasso')
+    var contando = document.getElementById('contando')
+    if (passo.value.length == 0 || Number(passo.value) < 1){
+        alert('[ERRO] Impossivel contar a passo "0"!')
+    } else {
+        if (inicio.value.length == 0 || fim.value.length ==0){
+            contando.innerHTML = 'Impossível contar!'
+        } else {
+            for(Number(inicio); Number(fim); Number(passo)){
+                contando.innerHTML = `...${inicio}`
+            }
+        }
+    }
+}
+
+
+		
+		
+		Minhas tentativas ex017
+		
+		
+		
+
+		
+		
+		
+---------------------------------------------------------------------		
+
+		---------------------------------
+		 Exercícios JavaScript (Parte 5)
+		---------------------------------
+		
+(Vamos fazer alguns exercícios de JavaScript? Chegou a hora de provar a si mesmo que todo o seu esforço está valendo a pena até aqui. Quando aprendemos e praticamos, solicitamos os nossos conhecimentos adquiridos. Então vamos lá! Não pule esse vídeo e faça todas as atividades propostas em JavaScript.)
+
+
+
+> Guanabara ask...
+------------------	
+	(No questions!)
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		- Exercícios JavaScript (Parte 6)
 
 
