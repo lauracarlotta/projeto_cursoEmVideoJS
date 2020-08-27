@@ -2998,23 +2998,159 @@ function contar(){
 	
 	
 	
+ *** RESOLUÇÃO DO GUANABARA ***
+ 
+		
+		EX016
+ 		*****
+ 
+ 
+ => HTML
+ 
+ 
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos contar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div id="numeros">
+            <p>Início:
+                <input type="number" name="txtinicio" id="txtinicio">
+            </p>
+            <p>Fim:
+                <input type="number" name="txtfim" id="txtfim">
+            </p>
+            <p>Passo:
+                <input type="number" name="txtpasso" id="txtpasso">
+            </p>
+            <input type="button" value="Contar" onclick="contar()"> 
+        </div>
+
+        <div id="contando">
+            <p>Preparando contagem... </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+ 
+ => CSS
+ 
+ 
+ body{
+    background-image: url(img/tempo.jpg);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
+
+div{
+    margin-top: 10px;
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+ 
+ 
+ 
+ 
+ => JS
+		
+// let foi criado nas ultimas versões do JS e é melhor por uma declaração do escopo*
+
+function contar(){
+    let inicio = document.getElementById('txtinicio')
+    let fim = document.getElementById('txtfim')
+    let passo = document.getElementById('txtpasso')
+    let contando = document.getElementById('contando')
+
+    if (inicio.value.length == 0 || fim.value.length ==0 || passo.value.length ==0){
+        contando.innerHTML = 'Impossível contar!'
+    } else{
+        contando.innerHTML = 'Contando:'
+        let ini = Number(inicio.value)
+        let f = Number(fim.value)
+        let pas = Number(passo.value)
+
+        if(pas <= 0){
+            alert('[ERRO] Impossivel contar a passo "1"!')
+            pas = 1
+        }
+        if(ini < f){
+            for(let c = ini; c <= f; c += pas){
+                // contagem crescente
+                contando.innerHTML += ` ${c} \u{1F449} `
+            }
+        } else {
+            for(let c = ini; c >= f; c -= pas){
+                // contagem decrescente
+                contando.innerHTML += ` ${c} \u{1F449} `
+            }
+        }
+        contando.innerHTML += `\u{1F3C1}`
+    }
+}		
+		
+		
+		
+---------------------------------------------------------------------		
+
+		---------------------------------
+		 Exercícios JavaScript (Parte 6)
+		---------------------------------
+		
+(Vamos fazer alguns exercícios de JavaScript? Chegou a hora de provar a si mesmo que todo o seu esforço está valendo a pena até aqui. Quando aprendemos e praticamos, solicitamos os nossos conhecimentos adquiridos. Então vamos lá! Não pule esse vídeo e faça todas as atividades propostas em JavaScript.)
+
+
+
+> Guanabara ask...
+------------------	
+	(No questions!)
 	
+	
+	
+ *** RESOLUÇÃO DO GUANABARA ***		
+		
+		EX017
+		*****
 		
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		- Exercícios JavaScript (Parte 6)
 
-
-
+---------------------------------------------------------------------
 
 Módulo F: Avançando os estudos em JavaScript
 5 Aulas
