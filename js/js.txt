@@ -2977,10 +2977,173 @@ function contar(){
 		Minhas tentativas ex017
 		
 		
-		
+=>>css (foi o mesmo para tenativa 1 e 2)
 
-		
-		
+
+body{
+    background-image: url(img/numeros.jpg);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+
+.sombra{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.527);
+}
+
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+
+=>> html (tentativa 1)
+**********************
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuando</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="sombra">
+        <h1>Que tabuada você quer?</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Números: 
+                <input type="number" name="txttabu" id="txttabu">
+                <button type="submit" onclick="gerar()">Gerar Tabuada</button>
+            </p>
+            
+        </div>
+
+        <div>
+            <p> 
+                <textarea  name="tabuada" id="tabuada" cols="20" rows="20" placeholder="Digite um número acima"></textarea>
+            </p>
+        </div>
+    </section>
+
+    <footer class="sombra">
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+=>> JS (tenatativa 1)
+*********************
+
+function gerar(){
+    let num = document.getElementById('txttabu')
+    let tabuada = document.getElementById('tabuada')
+
+    if (num.value.length == 0){
+        alert('[ERRO] Informe um numero')
+    } else {
+        let numero = Number(num.value)
+        for (let cont = 0; cont <=10; cont++){
+            resultado = cont * numero
+            tabuada.innerHTML = `${numero} * ${cont} = ${resultado} <br>`
+        }
+    }
+}
+
+
+
+=>> html (tenatativa 2 - com resultado [CORRIGIDO GUANABARA]) 
+*************************************************************
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuando</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="sombra">
+        <h1>Que tabuada você quer?</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Números: 
+                <input type="number" name="txttabu" id="txttabu">
+                <button type="submit" onclick="gerar()">Gerar Tabuada</button>
+            </p>
+            
+        </div>
+
+        <div>
+            <p> 
+                <select name="tabuada" id="tabuada" size="11">
+                    <option>Digite um botão acima</option>
+                </select>
+            </p>
+        </div>
+    </section>
+
+    <footer class="sombra">
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
+
+
+
+=>> JS (tenatativa 2 - com resultado [CORRIGIDO GUANABARA])
+***********************************************************	
+	
+
+function gerar(){
+    let num = document.getElementById('txttabu')
+    let tabuada = document.getElementById('tabuada')
+
+    if (num.value.length == 0){
+        alert('[ERRO] Informe um número!')
+    } else {
+        let numero = Number(num.value)
+        tabuada.innerHTML = ''
+        for (let cont = 0; cont <=10; cont++){
+            let item = document.createElement('option')
+            resultado = cont * numero
+            item.text = `${numero} * ${cont} = ${resultado}`
+            tabuada.appendChild(item)
+        }
+    }
+}
+
+	
 		
 ---------------------------------------------------------------------		
 
@@ -3146,14 +3309,239 @@ function contar(){
 		EX017
 		*****
 		
-		
+
+
+=>> html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="sombra">
+        <h1>Vamos contar?</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Número: 
+                <input type="number" name="txtnum" id="txtnum">
+                <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+            </p>
+        </div>
+
+        <div>
+            <p><select name="tabuada" id="tabuada" size="10">
+                <option>Digite um número acima</option>
+            </select></p>
+        </div>
+    </section>
+
+    <footer class="sombra">
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+=>>css
+
+body{
+    background-image: url(img/numeros.jpg);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+
+.sombra{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.527);
+}
+
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+=>> JS
+
+
+function gerarTabuada() {
+    let num = document.getElementById('txtnum')
+    let tabu = document.getElementById('tabuada')
+
+    if (num.value.length == 0){
+        alert('[ERRO] Informe um número!')
+    } else {
+        let numero = Number(num.value)
+        let cont = 1
+        tabu.innerHTML = ''
+        while (cont <= 10){
+            let item = document.createElement('option')
+            item.text = `${numero} x ${cont} = ${numero*cont}`
+            tabu.appendChild(item)
+            cont++
+        }
+    }
+}		
 		
 		
 
 ---------------------------------------------------------------------
 
-Módulo F: Avançando os estudos em JavaScript
-5 Aulas
+
+***************************************************		
+   => Módulo F: Avançando os estudos em JavaScript
+***************************************************
+
+
+	>> 5 Aulas <<
+
+		- Aula 15 – Variáveis Compostas
+		- Aula 16 – Funções
+		- Exercícios JavaScript (Parte 7)
+		- Exercícios JavaScript (Parte 8)
+		- Aula 17 – Próximos Passos
+		
+		
+				--> Variáveis compostas (Arrays)
+				--> Uso de funções e eventos (métodos também)
+				--> Passagem de parâmetros (pra esses eventos e funções)
+				--> Exercícios Porpostos (com arrays e vetores)
+				--> Próximos passos (quando o curso acabar, o que devemos estudar e focar)
+
+
+
+
+		--------------------------------
+		 Aula 15 – Variáveis Compostas
+		--------------------------------
+	
+	
+(Você sabe como funciona um array em JavaScript? Sabe qual é a vantagem em usar variáveis compostas em JavaScript? Consegue pensar em uma maneira de simplificar seus códigos em JavaScript, tornando-os menores?)	
+		
+> Guanabara ask...
+------------------
+
+		1 - Já treinou bastenate o uso das estruturas de repetição? while/ do-while / for?
+		
+				Ainda não, pois treinar nunca é demais!
+				
+				
+		2 - Aprendeu a como manipular objetos de formulários de HTML usando JS?
+		
+				Sim, ainda é confuso pra mim, mas nós acrescentamos uma variável onde ela recebe document.creatElemente(dentro de parentese covocamos o que seria do html = ex: um option de uma select, ou uma img de uma div ou de um body, enfim.) 
+				let item = document.createElement('option') Após isso criamos uma espécie de apêndice onde a atribuimos na vaviável a ser impressa na tela. Ex: - id tabuada do ex017
+				tabuada.appendChild(item) (e dentro do parenteses covocamos a variável já declarada.)
+				
+				
+		3 - Seria melhor tornar seus códigos menores e mais simplificados?
+		
+				Sim, e vemos isso nessa aula
+				
+		4 - Você é do tipo de pessoa que já ouviu falar que "usar array é difícil"?
+		
+				Difícil, não! Complexo e avançado: COM CERTEZA!
+				
+				
+				
+			
+			=>> ARRAY <<==
+			**************
+			
+			${VARIÁVEIS COMPOSTAS}
+			
+				1º, O QUE É UMA VARIÁVEL SIMPLES?
+					só armazenam um valor por vez
+					
+				
+				Logo, uma variável composta é capaz de armazenar mais de um valor ou vários valores numa mesma estrutura.
+				
+				
+> Usamos o mesmo exemplo para explicar variáveis = O do estacionamento onde daos identificadores para cada vaga para os carros. 
+	
+	Damos o mesmo identifcador > 
+	
+		E para declarar essas vagas, usamos => vaga auto (ou let auto.) E pra cada vaga, damos um identificador de índice > Uma chave que vai identificar cada uma delas > 
+		
+		
+		 |------------------> Variável composta, ou array (ou em pt, vetor)
+		 |             
+		_|__          			* Conteúdo, valor
+	Ex: let auto = [   ,    , * ]
+			  0   1   2   <- Índice ou key (ou em pt, chave)
+			 -----------
+			    |
+			    |-----------> Elementos
+			    
+			    
+			    
+			    >>> ENTÃO UM array OU UM vetor OU UMA variável composta É UMA VARIÁVEL QUE CONTÉM VÁRIOS elementos, CADA ELEMENTO É
+			    		 ------      ------       ------------------					----------    
+			    	COMPOSTO PELO SEU valor E POR UMA chave DE IDENTIFICAÇÃO <<<
+						  ------	   ------
+						  
+			----------------------------------------------------------------------------------------------------		  
+			| ***** PARA LEMBRAR *****                                                                         |
+			| O índice não começa no 1 e sim no 0. Ou seja, uma array com 5 elementos terá um índice de 0 a 4  |
+			----------------------------------------------------------------------------------------------------
+			
+			
+		Podendo ainda acrescentarmos valores nesse array:
+			
+			-> No seguinte ex,
+			
+		let num = [5, 8, 4] --> Aqui o índice foi de 0 a 2, por isso ali embaixo add o let num[3], que será a posição 3 do nosso índice.
+				
+		let num[3] = 6      --> Ou seja, eu tô dizenso assim pro JS: "Coloque o valor 5 na posição 3". Mesmo não existindo, o JS cria 						 prá nó a posição 3. Passando a ser:
+		num = [5, 8, 4, 6]  --> Array com 4 valores e índice indo de 0 a 3 elementos = total de 5 elementos.
+		
+					
+				     ==> Porém, isso é pensando que sabemos qual é a última posição do vetor. Caso você não saiba ou não queira 						   se preocupar com isso, é só dar o comando x.push(7) (onde x é a variável)
+		num.push(7)	     --> Dessa forma, a variável num ficará assim: 
+		
+		num = [5,8,4,6,7]   --> Um array com 5 valores e índice indo de 0 a 4 elementos = total de 5 elementos.
+		
+		
+		==>> Outros comandos:
+		
+			num.length  => Dirá qual o comprimento do array (*em outras linguagens há parenteses após o 'length'. No JS NÃO tem!)
+					 - length não é um método. LENGTH é um atributo!
+					 
+			num.sort() => Método sort organiza em ordem crescente os elementos do array. (ainda usando o ex acima: =>)
+			
+			=> [4,5,6,7,8] <= 
+			
+			
+		
+		
+			
+		
+		
+		
+
+---------------------------------------------------------------------
 Teste JavaScript
 
 
