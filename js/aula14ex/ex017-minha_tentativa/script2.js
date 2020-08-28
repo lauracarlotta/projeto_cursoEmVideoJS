@@ -3,12 +3,15 @@ function gerar(){
     let tabuada = document.getElementById('tabuada')
 
     if (num.value.length == 0){
-        alert('[ERRO] Informe um numero')
+        alert('[ERRO] Informe um número!')
     } else {
         let numero = Number(num.value)
+        tabuada.innerHTML = ''
         for (let cont = 0; cont <=10; cont++){
+            let item = document.createElement('option')
             resultado = cont * numero
-            tabuada.innerHTML = `${numero} * ${cont} = ${resultado} <br>`
+            item.text = `${numero} * ${cont} = ${resultado}`
+            tabuada.appendChild(item)
         }
     }
 }
