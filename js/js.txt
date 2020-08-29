@@ -3521,7 +3521,7 @@ function gerarTabuada() {
 				     ==> Porém, isso é pensando que sabemos qual é a última posição do vetor. Caso você não saiba ou não queira 						   se preocupar com isso, é só dar o comando x.push(7) (onde x é a variável)
 		num.push(7)	     --> Dessa forma, a variável num ficará assim: 
 		
-		num = [5,8,4,6,7]   --> Um array com 5 valores e índice indo de 0 a 4 elementos = total de 5 elementos.
+>>>>>>>>>>>>>>	num = [5,8,4,6,7]   --> Um array com 5 valores e índice indo de 0 a 4 elementos = total de 5 elementos.
 		
 		
 		==>> Outros comandos:
@@ -3531,10 +3531,54 @@ function gerarTabuada() {
 					 
 			num.sort() => Método sort organiza em ordem crescente os elementos do array. (ainda usando o ex acima: =>)
 			
-			=> [4,5,6,7,8] <= 
-			
-			
+			---------------------------------------
+			|	=> [ 4, 5, 6, 7, 8 ] <= 	|
+			---------------------------------------
+					
+					
+			=> [ 4, 5, 6, 7, 8 ] <=		
+					----					     ------
+					 |---------> Essa é a posição do array  =  | pos |
+					 					     ------
+					 					     
+	=> PARA PRINTAR O VALOR NA TELA, AO INVÉS DE COLOCAR DE FORMA INDIVIDUA, LINHA A LINHA, ASSIM: 
+	
+	(	console.log(num[0])
+		console.log(num[1])
+		console.log(num[2])
+		console.log(num[3])
+		console.log(num[4])	 )
+	
+	=> PODEMOS PRINTAR ASSIM, DE FORMA MAIS CURTA E MAIS SIMPLIFICADA:
+	
+			for(let pos = 0; pos < num.length; pos++){
+				console.log(num[pos])
+			}
 		
+		
+	(essa acima é a maneira tradicional de printar um array na tela, porém, a partir do ES6, o JS tem uma forma ainda mais simples, que é:)
+	
+		
+														 |---> (ou EM)
+			for (let pos in num){                                                              -------
+				console.log(num[pos])		<--- se leria assim: "PARA cada VARIÁVEL POS DENTRO de NUM "
+			}
+		
+		Este é otimizado para variáveis compostas e objetos, isso porque arrays e objetos são muito importantes para a linguajem JS.
+		Ela funcionará somente para arrays e objetos (que no fundo, ou na verdade, são a mesma coisa, porque todo array - no JS - é u 									object!)
+		
+		
+		=>> COMO BUSCAR VALORES DENTRO DE UM ARRAY??? <<==
+		
+			usamos o método:
+			----------------
+			
+				num.indexOf(7)   <= O JS retornará a chave 3, pois o valor 7 está na chava 3 do nosso array
+				
+			Caso, eu dê:
+			------------
+				
+				num.indexOf(3)	  <= Pra nós, o JS retornará -1, pois o valor 3 não existe! (Vide lá em cima, o código onde 							estamos o usando a variável num = [ 4, 5, 6, 7, 8 ]!!!!!!!!)
 		
 			
 		
