@@ -23,18 +23,18 @@ Tecnologias:
 * Ionic
 * Cordova
 
--------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
  * Introdução ao Curso *
--------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 > 1 Aula
 	Introdução – JavaScript Moderno
 	
 	
-*********************************************	
+*******************************************
    => Módulo A: Conhecendo o JavaScript
-*********************************************
+*******************************************
 
 	>> 4 Aulas <<
 	
@@ -97,7 +97,7 @@ Tecnologias:
 		 	| - JS = INTERAÇÃO  |
 		        --------------------
 		
----------------------------------------------------------------------		
+-------------------------------------------------------------------------------------------------------------------------------------------------		
 		
 		
 		----------------------------------
@@ -244,7 +244,7 @@ várias bibliotecas, frameworks, sdks, etc para a criação de jogos
 
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 		 
@@ -303,7 +303,7 @@ Preparando o ambiente de desenvolvimento, com:
 	
 	
 	
----------------------------------------------------------------------		
+-------------------------------------------------------------------------------------------------------------------------------------------------		
 		
 		
 		
@@ -393,7 +393,7 @@ Preparando o ambiente de desenvolvimento, com:
 </html>
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 	 
 
@@ -551,7 +551,7 @@ Preparando o ambiente de desenvolvimento, com:
 
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 	      
 	       -------------------------------
@@ -722,7 +722,7 @@ Preparando o ambiente de desenvolvimento, com:
 	
 	
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
    
 	       
 	       
@@ -867,7 +867,7 @@ Preparando o ambiente de desenvolvimento, com:
 	       			   
 	       
 	       
----------------------------------------------------------------------	       
+-------------------------------------------------------------------------------------------------------------------------------------------------	       
 	       
 	       
 	       --------------------------------
@@ -1110,7 +1110,7 @@ Preparando o ambiente de desenvolvimento, com:
        
        
        
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 	 
 
@@ -1380,7 +1380,7 @@ Preparando o ambiente de desenvolvimento, com:
 </html>
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 	       -----------------------
@@ -1677,7 +1677,7 @@ outro ex:
 			
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ****************************************		
@@ -1969,7 +1969,7 @@ if (país != 'Brasil'){
 </html>
 
 		
---------------------------------------------------------------------				
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 		-------------------------------
 		 Aula 11 - Condições (Parte 2)
@@ -2136,7 +2136,7 @@ switch(diaSem){
 }
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 		---------------------------------
 		 Exercícios JavaScript (Parte 1)
@@ -2230,7 +2230,7 @@ alert('Olá, mundo!')
 		
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 		---------------------------------
 		 Exercícios JavaScript (Parte 2)
@@ -2372,7 +2372,7 @@ function carregar(){
 	
 		
 		
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 		---------------------------------
 		 Exercícios JavaScript (Parte 3)
@@ -2581,7 +2581,7 @@ function verificar(){
 
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 *****************************************		
@@ -2739,7 +2739,7 @@ c++
 
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 		--------------------------------
 		 Aula 14 - Repetições (Parte 2)
@@ -2837,7 +2837,7 @@ for (var c = 5; c > 0; c--){
 }
 console.log ('Go, go, go!')							
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 		---------------------------------
@@ -3145,7 +3145,7 @@ function gerar(){
 
 	
 		
----------------------------------------------------------------------		
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 		---------------------------------
 		 Exercícios JavaScript (Parte 5)
@@ -3288,7 +3288,7 @@ function contar(){
 		
 		
 		
----------------------------------------------------------------------		
+--------------------------------------------------------------------------------------------------------------------------------------------------		
 
 		---------------------------------
 		 Exercícios JavaScript (Parte 6)
@@ -3408,7 +3408,7 @@ function gerarTabuada() {
 		
 		
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ***************************************************		
@@ -3580,9 +3580,162 @@ function gerarTabuada() {
 				
 				num.indexOf(3)	  <= Pra nós, o JS retornará -1, pois o valor 3 não existe! (Vide lá em cima, o código onde 							estamos o usando a variável num = [ 4, 5, 6, 7, 8 ]!!!!!!!!)
 		
+		
+		
+		
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		-------------------
+		 Aula 16 – Funções
+		-------------------
+		
+
+(Você sabe usar funções em JavaScript? Sabe como aplicar o uso de rotinas em seus códigos para torná-los mais simples? Sabe como usar uma função como resposta a um determinado evento? Sabe como realizar a passagem de parâmetros entre códigos JavaScript?)		
+		
+
+
+> Guanabara ask...
+------------------
+
+
+		1 - Conseguiu simplificar seu código com o uso de array?
+		
+				Sim, o código fica muito simples e limpo.
+				
+				
+				
+		2 - Sabe colocar um array em ordem usando apenas uma chaada de função?
+		
+				Sim, seria da seguinte forma:
+				
+					declaro uma variável e depois digito um comando:
+						let numero = [ 5, 4, 1, 3, 2]
+						numero.sort() e numero ficará assim:
+						numero = [ 1, 2, 3, 4, 5 ]
+						
+						
+						
+		3 - Lembra como disparar uma função simples quando apertamos um botão? 
+		
+				Sim, no html, informação com qual ação será dispara no JS (onmousemove, onclick, etc.) Em seguida damos uma nome a essa função ainda na mesma linha no HTML (então, para calcular uma conta quando clicasse no botão "Calcula" - onclick="calcular()"). No JS convocamos da seguinte maneira num arquivo externo:
+				function calcular(){
+					E aqui dentro "digitamos" o que queremos que aconteça
+				}
+				
+				E no proprio arquivo do html, acrescentaoms a tag <script> (grelamente ao final do código) e dentro dela colocamos a function:
+				
+		<script>
+		|	function calcular(){
+		|	|	E aqui dentro "digitamos" o que queremos que aconteça
+		|	}
+		</script>
+
+
+		
+		${Funções em JS}
+		
+		
+		O JS é uma linguagem que funciona sob um paradigma funcional, logo, FUNÇÃO é algo muito importante!
+		
+			Vamos a nossa histórinha pois em JS é exatamente como na vida real: Nós temos funções nela - ir pra escola, ir pro trabalho, comer, tomar banho, etc... são um conjunto de tarefas (são rotinas) que compoe o nosso dia-a-dia. Então,
 			
-		
-		
+			
+				=> Imaginamos que a nossa mãe sempre, todas semana, ela nos dê dinheiro e peça pra gente ir a mercearia comprar leite. Nós vamos a mercearia, independente de como seria, nossa mãe não quer saber como você vai (de onibus, bicleta, skate, não importa) ou em que mercearia você vai, quanto o leite vai custar, NÃO IMPORTA. Nós vamos a mercearia, pagamos o leite e voltamos com o leite. NOSSA MÃE SÓ QUER SABER O SEGUINTE: - ELA TE CHAMA; - TE DÁ O DINHEIRO; - VOCÊ (O FILHO), VAI A MERCEARIA, COMPRA O LEITE - E RETORNA COM O LEITE <=
+				
+				
+				Nas linguagens de programação chamamos isso (rotinas) de funções ou funcionalidades!
+				
+				
+			M Ã E(1)      ---->	  D I N H E I R O(2)    ----->     F I L H O(3)   --------
+			-----									  	   |
+			  |								   	   	   |
+			  |									   	   |
+		          -------------	L E I T E(5)	<-------     M E R C E A R I A(4)  <-------
+			
+			
+			
+			
+			ENTÃO, DANDO OS NOMES AOS BOIS:
+			
+				- Quando a sua mãe te chama, te dá uma ordem, ela faz uma
+					(1)CHAMADA; toda função precisa ter uma chamada, ou você pode ter uma funcionalidade que acontece toda quarta-feira você ter curso de karatê ou toda vez que chove, você precisa recolher a roupa do varal. Não é necessária a chamada, você não precisa de um disparo da sua mãe, o seu disparo é o relógio ou a chuva. A chamada nem sempre é vocal, ne sempre é verbalizada. Pode ser que ela seja automatizada.
+				- Você não pode ir a mercearia sem dinheiro, sem alguma coisa de entrada, o que chamamos de 
+					(2) PARÂMETRO; Nessa históra nós temos dois parâmetros: o dinheiro e aquilo que a sua mãe queria, que era o leite. Isso é um parâmetro de entrada e faz parte da chamada também. 
+				
+				- Quando você tá em posse do dinheiro e sabe da informação que o que a sua mãe quer, é o leite, você vai até a mercearia, o processo todo pra poder voltar com o leite chamamos de  
+					(3-4)AÇÃO; então toda função também tem uma ação envolvida.
+				- E no final, quando você já está voltando com o leite para casa para retorná-lo a sua mãe, você faz o 
+					(5)RETORNO;
+					
+			
+			ENTÃO TODA FUNÇÃO PODE TER OS SEGUINTES FATORES:
+				
+				- UMA CHAMADA;
+				- UM CONJUNTO DE PARÂMETROS;
+				- UMA AÇÃO e 
+				- UM RETORNO.
+			
+			Nem toda função usa parâmetros, nem toda função tem retornos.
+			
+			
+
+
+
+AS DEFINIÇÕES DE FUNÇÃO TEM AS SEGUINTES DEFINIÇÕES:
+			
+					=>> SÃO AÇÕES EXECUTADAS ASSIM QUE SÃO CHAMADAS OU EM OCORRÊNCIA DE ALGUM EVENTO!
+					
+					==>> UMA FUNÇÃO PODE RECEBER PARÂMETROS (no nosso caso é o dinheiro) E RETORNAR UM RESULTADO (e no nosso 												caso é o leite)
+					
+				 |---------> chamamos de parâmetro formal	
+			      ------		
+		function ação(param){	  |-----
+			****                   |
+			****                   |---->  Quando eu executar esse código, ele irá pular essa função e irá para a chamada ali embaixo.
+			****                   |	E vai executar só aquele comando ali (ação(5)). Eu vou executar essa ação passando um
+			return res             |	valor, passando 5. Esse 5 irá lá para o param da function ação. Então, nesse caso aqui, o
+		}			  |-----	parâmetro valerá 5. Depois de executado o bloco dentro de chaves (os * dali), a função 
+							poderá retornar um resultado (que é a linha dentro de chaves, 'resturne res'). Esse retorno
+							de resultado será voltado de novo ali para quem fez a chamada (ação), no caso a sua mãe, na
+[fazendo ---> 	ação(5)				nossa história real.
+chamada]  	    ---					Então, a chamada nesse caso é a feita do lado de fora da nossa function (diferente)
+		     |						De quando fizemos as chamadas quando estavamos manipulando o dom usando o 'onclick'
+		     |						como chamada. 
+		     |					 
+		     |
+		     |---> chamamos de parâmetro real
+		     
+		     
+		     Ex:
+		     
+		     		function parimp(n){
+		     		|	if(n%2 == 0){
+		     		|	|	
+		     		|	|	return 'Par'
+		     		|	|
+		     		|	} else {
+		     		|	|	
+		     		|	|	return 'Impar'
+		     		|	|
+		     		|	}
+		     		}
+		     		
+		     		let res = parimp(3)   <--- Sem a chamada o código executará mas não mostrará nada!
+		     					<-- Então, o JS retornará impar para o res e se eu mandar mostrar res, printará na tela 								    'impar'.
+		     					***** Uma função em JS só pode ter um retorno!
+		     					 
+ 
+			
+			
+
+---------------------------------------------------------------------
+
+
+
+		- Exercícios JavaScript (Parte 7)
+		- Exercícios JavaScript (Parte 8)
+		- Aula 17 – Próximos Passos
 		
 
 ---------------------------------------------------------------------
