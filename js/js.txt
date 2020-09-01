@@ -3760,14 +3760,102 @@ console.log(soma(7))
 
 
 			**Conseguimos ainda colocar uma function dentro de uma variável**
+		
+		
+		
+		// Podemos ainda colocar uma function dentro de uma variável
+
+let x = function(n){
+    return n*2
+}
+
+console.log(x(6)) // Ou seja, eu passei pra minha variável um parâmetro e ele conseguiu executar uma função!	
+	
+	
 			
-			
+		(Há uma sintaxe também que se chama arrow function = São as funções arrow - flecha - que usam esse sinal => )
+		
+		
+		
+
+
+/* Calcular o fatorial de um número
+5! = 5 x 4 x 3 x 2 x 1 = 120
+Maneira tradicional */ 
+
+function fatorial(n){
+    let fat = 1
+    for (let c = n; c > 1; c--){
+        fat *= c
+    }
+    return fat
+}
+
+console.log(fatorial(5))
+
 
 ---------------------------------------------------------------------
 
 
+// Recursividade
 
-		- Exercícios JavaScript (Parte 7)
+function fatorial(n){
+    if (n == 1){
+        return 1
+    } else {
+        return n * fatorial(n-1) 
+    }
+}
+
+console.log(fatorial(17))
+
+// a função fatorial possui uma chamda pra ela mesma
+
+/*
+
+5! = 5 x 4 x 3 x 2 x 1 = 120
+5! = 5 x 4!
+
+n! = n x (n-1)!
+1! = 1
+*/
+
+
+Lembre-se o que são:
+	
+	- funções;
+	- chamadas;
+	- paramêtros;
+	- ações;
+	- retorno.
+	
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		---------------------------------
+		 Exercícios JavaScript (Parte 7)
+		---------------------------------
+		
+
+()		
+		
+
+
+> Guanabara ask...
+------------------
+
+
+
+
+
+
+
+
+
+
+	
 		- Exercícios JavaScript (Parte 8)
 		- Aula 17 – Próximos Passos
 		
