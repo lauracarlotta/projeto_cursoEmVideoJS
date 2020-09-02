@@ -4152,19 +4152,176 @@ function finalizar(){
 		----------------------------
 		
 
-()		
+(O que você precisa aprender sobre JavaScript a partir de agora? Você conseguiu assistir todas as aulas do curso para iniciantes em JavaScript? Quer aprender um pouco mais de JavaScript avançado?)		
 		
 
 
 > Guanabara ask...
 ------------------
 
-	(No questions!)	
+	1 - Assistiu o curso completo? 
+	
+			Sim, tenho várias dúvidas ainda e econtinuarei estudando
+			
+			
+			
+	2 - Você fez todos os exercícios propostos?
+	
+			Sim, o último em particular me fez ter uma alto análise. Consegui o quanto falta de lógica pra mim ainda! Fiz anotações no código comprarando com a resolução do que eu fiz sozinha e que no caso não foi até o fim. Percebi que eu até consigo pensar no que fazer, porém na hora de ordernar o código, colocando ele em ordem correta pra ele execute, não fica organizado e com isso, o código não funciona. Percebi também que eu não usei o último exercício que o Guanabara ensinou sobre funções, onde um função pode fazer uma chamada pra outra função. Me clareou bastante coisa e já sei o que devo estudar antes de dar continuidade no curso.
+			
+			
+			
+	3 - Você já tentou resolver os exercícios sem ajuda do vídeo.
+	
+			Sim, e conclui que ainda não posso avançar nos estudos pois devo fazer ainda ais exercícios de lógica de programação.
+			
+			
+			
+	4 - Você já criou uam situação qualquer e tentou resolver por conta pŕopria?
+	
+			Não ainda, mas a partir da conclusão que eu fiz ao témino da aula passada, já tenho vários probleminhas a serem resolvidos que já vi na faculdade com c++ e portugol, além do que eu vou pegar do curso de Python.
 		
 		
 		
+	${PRÓXIMOS PASSOS}
+	******************
+		
+		1º O QUE VIMOS NESSE CURSO:
+		
+			- FUNDAMENTOS (fundamentos da linguagem; como ele surgiu; seu paradigma de linguagem client-server; a evolução dele com NODE.js pra conseguir alcanar outros níveis - tanto no cliente como nos serfidores)
+			
+			- VARIÁVEIS E DADOS(váriaveis; tipos de dados; como o JS coloca os dados dentro das variáveis; como o JS trata os tipos primitivos; valores e variáveis)
+			
+			- OPERADORES (Como tratar valores e variáveis em operações; operadores aritméticos, operadores lógicos, operadores relacionias;)
+			- CONDIÇÕES (IF simples, IF composto, If aninhado, switch)
+			
+			- REPETIÇÕES (while; do/while; for)
+			- ARRAYS (variáveis compostas;)
+			- FUNCTIONS (uma matéria bem extensa e como o JS é muiltiparadigma - ela funciona também como paradigma funcional)
+			
+			- DOM
+			
+			VIMOS TUDO ISSO DA FORMA TRADICIONAL, USANDO O NODE.js RODANDO NA NOSSA PROPRIA MAQUINA; UTILIZANDO RODANDO DIRETAMENTE NO NOSSO NAVEGADOR, UTILIZANDO A ENGENIER V8 DO GOOGLE; E TAMBÉM FIZEOS ISSO USANDO RODANDO NO NOSSO CLIENTE UTILIZANDO O >> DOM <<, que foi quando a gente pegou os dados do formulário, os componentes visuais da tela, alterou, manipulou e fe o JS falar com o HTML e CSS. 
 
+
+E AGORA SIM:
+
+	${PRÓXIMOS PASSOS}
+	******************
+	
+		* FAZER O CURSO DE HTML E CSSS
+		
+		- FUNCTIONS (arrow functions, callbacks, funções anônimas, IIFEs, JS funcional)
+		
+		- OBJETOS (além de o JS ser uma liguagem funcional, ela também é uma linguage orientada a obejtos - OO - então você consegue declarar objetos, utilizar obejtos)
+		
+		- MODULARIZAÇÃO (pra você modularizar o seu código, deixar o seu código separados em arquivos separados; reutilizar códigos utilizando JS)
+		
+		- RegEx (EXPRESSÕES REGULARES - JS também tem compatibilidade com expressões regulares - para fazer validação de dados economiza muito tempo e código.)
+		
+		- JSON (É meio que estrutura de objeto que você consegue transmitir dados, salvar dados localmente)
+		
+		- AJAX (Quando você chega ao final da página e ela não te dá uma próxima página, ela mesma automaticamente carrega ais conteúdo é feito com AJAX)
+		
+		- NodeJS (pra você conseguir fazer os seus scripts rodar no servidor. Isso dá um potencial muito grande pra linguagem - sem falar num monte de bibliotecas, de framework: JQuery, VueJS, Angular)
+		
+		 
+		 
+		 >>>>> INTRODUÇÃO A OBJETO <<<<<
+		 
+		 		
+		 	(Revisando Arrays)
+		 	
+		 	
+		 	let num = [   ,   ,   ]    <-- Quando uma variável não é declarada com parenteses e sim com colchetes, ela se torna 							automaticamente um ARRAY.
+		 		
+		 		
+		 		 num
+		 		------------------------
+		 		|	|	|	| <--  Ou seja, é como se fosse uma váriavel com mais espaços para armazenar infos (pois
+		 		------------------------      uma variável (var x = () ou let y = ()) só pode armazenar um dado de cada vez,  
+		 		    0       1      2	       enquanto que um ARRAY (let z = []) pode amazenar quantos dados você quiser, 								       lembrando que assim que os "espaços" são criados, damos um índice para poder 							       localizar as informações (ou como no nosso exemplo do estacinamento, o índice é uma 								       maneira de não ter que procurar o carro pelo estacionaento todo, caso eu esqueça 								       onde eu o deixei)
+		 		
+		 		
+		 		
+		 		let num = [ 8 , 5 , 3 ]  <--  Atribuindo o valor a cada espaço, graficamente abaixo montramos melhor 							       representado	 
+		 		
+		 		
+		 		 num
+		 		------------------------
+		 		|   8	|   5	|   3	| <-- Com isso podemos ver que o valor 8 está no índice "0", o valor 5 está no índice "0" e
+		 		------------------------     o valor 3 está no índice "2". Então temo um array com 3 valores variando o índice de 
+		 		    0       1      2	      0 a 2.
+		 		    
+		 		    
+		 		    
+		 		    OS ARRAYS (em JS) SÃO HETEROGÊNIOS, ELES ACEITAM VALORES DE TIPOS DIFERENTES. Ex: eu posso colocar um nome no índice 0, um sexo no índice 1, um endereço com índice 2 e assim sucessivamente. Porém o índice nunca mudará, sempre seguira a ordem partindo do 0 e indo até o último valor, tornando-se assim difícilde manusear já que em OBJECTS o índice se adapta, como veremos embaixo.
+		 		    
+		 		    
+		 		    
+		 		    let amigo = {       ,   ,           ,             }    <-- Quando uma variável não é declarada com parenteses 													  e sim com chaves, ela se torna automaticamente um 													  OBJECT. Como se fosse um bloco de código (mas não 													  é um bloco de código, hein!!)
+		 		    
+	 amigo
+	----------------------------------------------------------------------
+	|		|	|			| 			|    <--  E ela terá espaços (tamanhos) bem diferentes e com
+	----------------------------------------------------------------------         índices diferentes.
+
+
+
+	let amigo = {nome:'José', sexo:'M', peso:85,4, engordar(p){}}  <-- Aqui se encontra a diferença básica de um array para um objetc. A 										     primeira parte do que está entre a chave é o atributo e a segunda 										     parte o valor dele. Assim:
+
+
+ 	 amigo
+	----------------------------------------------------------------------
+	|     José	|   M	|	  85,4		|      [FUNCTION]	|    <-- Assim, o OBJECT vai ter um identificador literal (José terá
+	----------------------------------------------------------------------	 o índice nome e não índice "0" como seria no ARRAY, facili-
+	      nome        sexo           peso                engordar(p)		 tando assim a busca pelos valores como várias outras 											 coisas). Neste caso o índice se torna um atributo. Então 												 criamos um atributo do objeto, então ficaria atributo NOME 												 com valor 'José'. E AINDA: o OBJECT recebe functions 											 também!
+	
+	
+	
+			*** Além de os OBJECTS guardarem atributos, eles também guardam FUNCIONALIDADES, que é o que chamamos de 
+								  MÉTODOS! ***
+								  
+
+EX:
+
+
+/*
+Ambos darão "typeof como object "{
+    
+    let amigo = [] <- Array 
+
+    let amigo = {} <- Object
+}
+
+console.log(typeof amigo) <- No JS, um array é um objeto e um objeto é um OBJETO rs, iso porquê eles são estruturas da mesma
+classe, estruturas que vieram da mesma origem. */
+
+let amigo = 
+{nome:'José', 
+sexo:'M', 
+peso:85.4,
+engordar(p = 0){
+    console.log('Engordou!')
+    this.peso += p
+}}
+
+amigo.engordar(2)
+console.log(`${amigo.nome} pesa ${amigo.peso} kg.`)
+
+// console.log(amigo.nome) <- object.atributo = mostra isoladamente o valor.
+// this é uma palavra auto referencia do object
+			
+			
+	
+	
+	
+	Isso leva a programação JS em outro patamar: PODEMOS COLOCAR FUNÇÕES DENTRO DE VARIÁVEIS!!!!!
+	A nova ECMAScript tem a permissão da criação de classe pra você conseguir replicar objetos com as mesmas características!
+	
+	
 -------------------------------------------------------------------------------------------------------------------------------------------------
+
 Teste JavaScript
 
 
