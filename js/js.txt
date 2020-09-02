@@ -3839,6 +3839,319 @@ Lembre-se o que são:
 		---------------------------------
 		
 
+(Vamos fazer alguns exercícios de JavaScript? Chegou a hora de provar a si mesmo que todo o seu esforço está valendo a pena até aqui. Quando aprendemos e praticamos, solicitamos os nossos conhecimentos adquiridos. Então vamos lá! Não pule esse vídeo e faça todas as atividades propostas em JavaScript)		
+		
+
+
+> Guanabara ask...
+------------------
+
+		1 - Já aprendeu a usar direito a extensão Watch in Chrome no VSCode?
+		
+			Não, pois o mesmo já não está disponível. (Estou usando o live server.)
+			
+		2 - Já aprendeu a usar o Modo de Depuração do VSCode? 
+		
+			Acredito que sim, de forma genérica, mas sim!
+			
+		3 - Já treinou bastante com os componentes arrays e functions?
+		
+		Treinei, mas não o suficiente!
+		
+		
+	
+	${Hora de Praticar}
+	
+			
+Minha tentativa
+
+
+function adicionar(){
+    let num = document.getElementById('txtnum')
+    let insere = document.getElementById('txtinsere')
+    let item = []
+
+    if (num.value.length == 0){
+        alert('[ERRO] Informe um número!')
+    } else {
+        let numero = Number(num.value)
+        
+        if (numero < 1 || numero > 100){
+            alert('[ERRO] Valor inválido ou já encontrado na lista')
+        }
+        item = numero
+        if (numero.indexOf(numero) != -1){
+            alert('[ERRO] Valor inválido ou já encontrado na lista')
+        } else {
+            item = document.createElement('option')
+            insere.appendChild(item)
+            item.text = `Valor ${numero} adicionado.`
+            item++
+        }   
+    }
+}
+
+function finalizar(){
+    return item.innerHTML += 
+    `Ao todo, temos ${item.length} números cadastrados. </br>`
+}
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		---------------------------------
+		 Exercícios JavaScript (Parte 8)
+		---------------------------------
+		
+
+(Vamos fazer alguns exercícios de JavaScript? Chegou a hora de provar a si mesmo que todo o seu esforço está valendo a pena até aqui. Quando aprendemos e praticamos, solicitamos os nossos conhecimentos adquiridos. Então vamos lá! Não pule esse vídeo e faça todas as atividades propostas em JavaScript)		
+		
+
+
+> Guanabara ask...
+------------------
+
+	(No questions!)
+
+
+
+	${RESOLUÇÃO GUANABARA}
+	
+		
+==>> HTML
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Número (entre 1 e 100): 
+                <input type="number" name="fnum" id="fnum">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+            </p>
+            <p><select name="flista" id="flista" size="8"></select></p>
+            <input type="button" value="Finalizar" onclick="finalizar()">
+                
+        </div>
+
+        <div id="res">
+            <p>
+                
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+==>> CSS
+
+body{
+    background: rgb(137, 137, 235);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+}
+
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
+
+select{
+    width: 150px;
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+==>> JS
+
+let num = document.querySelector('input#fnum')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
+let valores = []
+
+
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    } else {
+        return false
+    }
+}
+
+function inLista(n, l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    } else {
+        return false
+    }
+}
+
+function adicionar(){
+    if(isNumero(num.value) && !inLista(num.value, valores)){
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Valor ${num.value} adicionado.`
+        lista.appendChild(item)
+        res.innerHTML = ''
+    } else {
+        alert('[ERRO] Valor inválido ou já se encontra na lista!')
+    }
+    num.value = ''
+    num.focus()
+}
+
+function finalizar(){
+    if(valores.length == 0){
+        alert('Informe um número para continuar!')
+    } else {
+        let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for(let pos in valores){
+            soma += valores[pos]
+            if(valores[pos] > maior)
+            maior = valores[pos]
+        }
+        for(let pos in valores){
+            if(valores[pos] < menor)
+            menor = valores[pos]
+        }
+        media = soma/tot
+
+        res.innerHTML = ''
+        res.innerHTML += `<p>O total de elementos informados foram <strong>${tot}</strong> elementos.</p>`
+        res.innerHTML += `<p>O maior valor informado foi o número <strong>${maior}</strong>.</p>`
+        res.innerHTML += `<p>O menor valor informado foi o número <strong>${menor}</strong>.</p>`
+        res.innerHTML += `<p>Somando todos os valores, o total é <strong>${soma}</strong>.</p>`
+        res.innerHTML += `<p>A média de todos os valores, é igual a <strong>${media}</strong>.</p>`
+    }
+}
+		
+		
+let num = document.querySelector('input#fnum')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
+let valores = [] 
+/* 1º erro = colocar o array dentro de uma função especifica ao invés de fazer a declaração dentro do escopopara 
+que todo o código tivesse acesso ao mesmo */
+
+
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    } else {
+        return false
+    }
+}
+
+function inLista(n, l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    } else {
+        return false
+    }
+}
+
+/* 2º erro = não utilizei a ultima aula sobre funções, quando o Guanabara mostra uma forma de uma função fazer uma chamada
+para outra função */
+
+// 3º Eu percebi que os valores não estavam sendo adicionados no array (usando o .push() resolvemos esse problema)
+
+/* 4º Eu usei as divs do html errados também pensando que eu deveria partilhar os botões nas div, enquanto na verdade o que 
+ eu deveria ter feito era colocar inputs em uma div e o res em outra. */
+function adicionar(){
+    if(isNumero(num.value) && !inLista(num.value, valores)){
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Valor ${num.value} adicionado.`
+        lista.appendChild(item)
+        res.innerHTML = ''
+    } else {
+        alert('[ERRO] Valor inválido ou já se encontra na lista!')
+    }
+    num.value = ''
+    num.focus()
+}
+
+function finalizar(){
+    if(valores.length == 0){
+        alert('Informe um número para continuar!')
+    } else {
+        let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+
+        /* Percebi também que mesmo que eu tivesse conseguido chegar a essa parte do exercício, eu não teria usado esse laço
+        pra conseguir o que eu precisava*/
+            
+        for(let pos in valores){
+            soma += valores[pos]
+            if(valores[pos] > maior)
+            maior = valores[pos]
+        }
+        for(let pos in valores){
+            if(valores[pos] < menor)
+            menor = valores[pos]
+        }
+        media = soma/tot
+
+        res.innerHTML = ''
+        res.innerHTML += `<p>O total de elementos informados foram <strong>${tot}</strong> elementos.</p>`
+        res.innerHTML += `<p>O maior valor informado foi o número <strong>${maior}</strong>.</p>`
+        res.innerHTML += `<p>O menor valor informado foi o número <strong>${menor}</strong>.</p>`
+        res.innerHTML += `<p>Somando todos os valores, o total é <strong>${soma}</strong>.</p>`
+        res.innerHTML += `<p>A média de todos os valores, é igual a <strong>${media}</strong>.</p>`
+    }
+}
+		
+		
+-------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		----------------------------
+		 Aula 17 – Próximos Passos
+		----------------------------
+		
+
 ()		
 		
 
@@ -3846,21 +4159,12 @@ Lembre-se o que são:
 > Guanabara ask...
 ------------------
 
-
-
-
-
-
-
-
-
-
-	
-		- Exercícios JavaScript (Parte 8)
-		- Aula 17 – Próximos Passos
+	(No questions!)	
+		
+		
 		
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 Teste JavaScript
 
 
